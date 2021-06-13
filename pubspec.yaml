@@ -2,20 +2,19 @@ name: me
 version: 1.0.0+1
 publish_to: none
 description: A new Flutter project.
-environment: 
+environment:
   sdk: '>=2.12.0 <3.0.0'
 
-dependencies: 
+dependencies:
+  flutter:
+    sdk: flutter
   cupertino_icons: ^1.0.2
-  url_strategy: ^0.2.0
   get: 4.1.4
-  flutter: 
+  url_strategy: ^0.2.0
+
+dev_dependencies:
+  flutter_test:
     sdk: flutter
 
-dev_dependencies: 
-  flutter_test: 
-    sdk: flutter
-
-flutter: 
+flutter:
   uses-material-design: true
-
