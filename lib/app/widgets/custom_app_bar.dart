@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:me/app/theme/themes.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({Key? key}) : super(key: key);
@@ -9,10 +11,13 @@ class CustomAppBar extends StatelessWidget {
     return Container(
       height: height,
       decoration: BoxDecoration(
-        color: Colors.grey,
+        color: Get.theme.primaryColor,
         boxShadow: [
           BoxShadow(
-              color: Colors.black, offset: Offset(0.0, 2.0), blurRadius: 6.0)
+            color: Colors.black,
+            offset: Offset(0.0, 2.0),
+            blurRadius: 6.0,
+          )
         ],
       ),
       child: Row(
@@ -36,6 +41,14 @@ class CustomAppBar extends StatelessWidget {
               ],
             ),
           ),
+          MaterialButton(
+            onPressed: () {
+              Get.changeThemeMode(
+                Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,
+              );
+            },
+            child: Text('Change Theme'),
+          )
         ],
       ),
     );
