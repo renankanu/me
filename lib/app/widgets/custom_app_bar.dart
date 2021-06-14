@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:me/app/theme/themes.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.black,
-            offset: Offset(0.0, 2.0),
+            offset: Offset(0.0, 1.0),
             blurRadius: 6.0,
           )
         ],
@@ -47,7 +47,11 @@ class CustomAppBar extends StatelessWidget {
                 Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,
               );
             },
-            child: Text('Change Theme'),
+            child: FaIcon(
+              Get.isDarkMode
+                  ? FontAwesomeIcons.lightbulb
+                  : FontAwesomeIcons.solidLightbulb,
+            ),
           )
         ],
       ),
