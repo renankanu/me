@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:me/app/widgets/menu_item.dart';
+import 'package:me/generated/locales.g.dart';
 
 class CustomAppBar extends StatefulWidget {
   const CustomAppBar({Key? key}) : super(key: key);
@@ -55,64 +56,46 @@ class _CustomAppBarState extends State<CustomAppBar> {
             Row(
               children: [
                 MenuItem(
-                  title: 'about',
+                  title: LocaleKeys.menu_about.tr,
                   onHolver: (value) {
-                    setState(() {
-                      _isHovering[0] = value;
-                    });
+                    setState(
+                      () {
+                        _isHovering[0] = value;
+                      },
+                    );
                   },
                   onPress: () {},
                   isHolver: _isHovering[0],
                 ),
                 MenuItem(
-                  title: 'about',
+                  title: LocaleKeys.menu_skills.tr,
                   onHolver: (value) {
                     setState(() {
-                      _isHovering[0] = value;
+                      _isHovering[1] = value;
                     });
                   },
                   onPress: () {},
-                  isHolver: _isHovering[0],
+                  isHolver: _isHovering[1],
                 ),
                 MenuItem(
-                  title: 'about',
+                  title: LocaleKeys.menu_repositories.tr,
                   onHolver: (value) {
                     setState(() {
-                      _isHovering[0] = value;
+                      _isHovering[2] = value;
                     });
                   },
                   onPress: () {},
-                  isHolver: _isHovering[0],
+                  isHolver: _isHovering[2],
                 ),
                 MenuItem(
-                  title: 'about',
+                  title: LocaleKeys.menu_experiences.tr,
                   onHolver: (value) {
                     setState(() {
-                      _isHovering[0] = value;
+                      _isHovering[3] = value;
                     });
                   },
                   onPress: () {},
-                  isHolver: _isHovering[0],
-                ),
-                MenuItem(
-                  title: 'about',
-                  onHolver: (value) {
-                    setState(() {
-                      _isHovering[0] = value;
-                    });
-                  },
-                  onPress: () {},
-                  isHolver: _isHovering[0],
-                ),
-                MenuItem(
-                  title: 'about',
-                  onHolver: (value) {
-                    setState(() {
-                      _isHovering[0] = value;
-                    });
-                  },
-                  onPress: () {},
-                  isHolver: _isHovering[0],
+                  isHolver: _isHovering[3],
                 ),
               ],
             ),
@@ -126,6 +109,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                 Get.isDarkMode
                     ? FontAwesomeIcons.lightbulb
                     : FontAwesomeIcons.solidLightbulb,
+                size: 16,
               ),
             )
           ],
