@@ -57,7 +57,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
               children: [
                 MenuItem(
                   title: LocaleKeys.menu_about.tr,
-                  onHolver: (value) {
+                  onHover: (value) {
                     setState(
                       () {
                         _isHovering[0] = value;
@@ -65,37 +65,37 @@ class _CustomAppBarState extends State<CustomAppBar> {
                     );
                   },
                   onPress: () {},
-                  isHolver: _isHovering[0],
+                  isHover: _isHovering[0],
                 ),
                 MenuItem(
                   title: LocaleKeys.menu_skills.tr,
-                  onHolver: (value) {
+                  onHover: (value) {
                     setState(() {
                       _isHovering[1] = value;
                     });
                   },
                   onPress: () {},
-                  isHolver: _isHovering[1],
+                  isHover: _isHovering[1],
                 ),
                 MenuItem(
                   title: LocaleKeys.menu_repositories.tr,
-                  onHolver: (value) {
+                  onHover: (value) {
                     setState(() {
                       _isHovering[2] = value;
                     });
                   },
                   onPress: () {},
-                  isHolver: _isHovering[2],
+                  isHover: _isHovering[2],
                 ),
                 MenuItem(
                   title: LocaleKeys.menu_experiences.tr,
-                  onHolver: (value) {
+                  onHover: (value) {
                     setState(() {
                       _isHovering[3] = value;
                     });
                   },
                   onPress: () {},
-                  isHolver: _isHovering[3],
+                  isHover: _isHovering[3],
                 ),
               ],
             ),

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:me/app/utils/colors.dart';
+import 'package:me/app/core/colors.dart';
 
 class MenuItem extends StatefulWidget {
   final String title;
-  final Function(bool) onHolver;
+  final Function(bool) onHover;
   final Function() onPress;
-  final bool isHolver;
+  final bool isHover;
 
   const MenuItem(
       {Key? key,
-      required this.onHolver,
-      required this.isHolver,
+      required this.onHover,
+      required this.isHover,
       required this.title,
       required this.onPress})
       : super(key: key);
@@ -24,7 +24,7 @@ class _MenuItemState extends State<MenuItem> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: InkWell(
-        onHover: widget.onHolver,
+        onHover: widget.onHover,
         onTap: widget.onPress,
         child: Container(
           height: 30,
@@ -34,7 +34,7 @@ class _MenuItemState extends State<MenuItem> {
                 child: Text(
                   widget.title,
                   style: TextStyle(
-                    color: widget.isHolver
+                    color: widget.isHover
                         ? CustumizedColors.vistaBlue
                         : CustumizedColors.white,
                   ),
@@ -47,7 +47,7 @@ class _MenuItemState extends State<MenuItem> {
                   maintainAnimation: true,
                   maintainState: true,
                   maintainSize: true,
-                  visible: widget.isHolver,
+                  visible: widget.isHover,
                   child: Container(
                     height: 2,
                     width: 20,
