@@ -12,7 +12,13 @@ class CustomAppBar extends StatefulWidget {
 }
 
 class _CustomAppBarState extends State<CustomAppBar> {
-  List<bool> _isHovering = [false, false, false, false];
+  final navItems = [
+    LocaleKeys.menu_about.tr,
+    LocaleKeys.menu_skills.tr,
+    LocaleKeys.menu_repositories.tr,
+    LocaleKeys.menu_experiences.tr
+  ];
+  var selectedItemIndex = -1;
   @override
   Widget build(BuildContext context) {
     var height = AppBar().preferredSize.height;
@@ -54,50 +60,20 @@ class _CustomAppBarState extends State<CustomAppBar> {
               ),
             ),
             Row(
-              children: [
-                MenuItem(
-                  title: LocaleKeys.menu_about.tr,
-                  onHover: (value) {
-                    setState(
-                      () {
-                        _isHovering[0] = value;
-                      },
-                    );
-                  },
-                  onPress: () {},
-                  isHover: _isHovering[0],
+              children: List.generate(
+                navItems.length,
+                (index) => Container(
+                  child: MenuItem(
+                    onPress: () {
+                      setState(() {
+                        selectedItemIndex = index;
+                      });
+                    },
+                    isActive: selectedItemIndex == index,
+                    text: navItems[index],
+                  ),
                 ),
-                MenuItem(
-                  title: LocaleKeys.menu_skills.tr,
-                  onHover: (value) {
-                    setState(() {
-                      _isHovering[1] = value;
-                    });
-                  },
-                  onPress: () {},
-                  isHover: _isHovering[1],
-                ),
-                MenuItem(
-                  title: LocaleKeys.menu_repositories.tr,
-                  onHover: (value) {
-                    setState(() {
-                      _isHovering[2] = value;
-                    });
-                  },
-                  onPress: () {},
-                  isHover: _isHovering[2],
-                ),
-                MenuItem(
-                  title: LocaleKeys.menu_experiences.tr,
-                  onHover: (value) {
-                    setState(() {
-                      _isHovering[3] = value;
-                    });
-                  },
-                  onPress: () {},
-                  isHover: _isHovering[3],
-                ),
-              ],
+              ),
             ),
             MaterialButton(
               onPressed: () {
