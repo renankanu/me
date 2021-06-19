@@ -12,21 +12,23 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     final PageController controller = PageController(initialPage: 0);
     return Scaffold(
-      body: Column(
-        children: [
-          CustomAppBar(),
-          Expanded(
-            child: PageView(
-              scrollDirection: Axis.vertical,
-              controller: controller,
-              children: [
-                IntroSection(),
-                AboutSection(),
-                Text('Text 2'),
-              ],
+      body: Container(
+        child: Column(
+          children: [
+            CustomAppBar(),
+            Expanded(
+              child: PageView(
+                scrollDirection: Axis.vertical,
+                controller: controller,
+                children: [
+                  IntroSection(),
+                  AboutSection(),
+                  Text('Text 2'),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
