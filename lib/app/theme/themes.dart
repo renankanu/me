@@ -16,7 +16,7 @@ class Themes {
     accentColor: CustomizedColors.burntSienna,
     scaffoldBackgroundColor: CustomizedColors.ebonyClay,
     shadowColor: CustomizedColors.black.withOpacity(0.5),
-    textTheme: GoogleFonts.nunitoTextTheme().copyWith(
+    textTheme: GoogleFonts.poppinsTextTheme().copyWith(
       bodyText2: TextStyle(color: CustomizedColors.white),
     ),
   );
