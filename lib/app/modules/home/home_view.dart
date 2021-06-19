@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:me/app/widgets/custom_app_bar.dart';
 
-import '../controllers/home_controller.dart';
+import 'home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   @override
