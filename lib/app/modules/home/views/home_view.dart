@@ -14,7 +14,7 @@ class HomeView extends GetView<HomeController> {
           CustomAppBar(),
           Center(
             child: Text(
-              'HomeView is working',
+              'HomeView is working =>',
               style: TextStyle(fontSize: 20),
             ),
           ),

@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:me/app/core/colors.dart';
 
 class Themes {
   final lightTheme = ThemeData.light().copyWith(
+    brightness: Brightness.light,
     primaryColor: Colors.green,
   );
 
   final darkTheme = ThemeData.dark().copyWith(
-    primaryColor: Colors.red,
+    brightness: Brightness.dark,
+    primaryColor: CustomizedColors.ebonyClay,
+    backgroundColor: CustomizedColors.ebonyClay,
+    accentColor: CustomizedColors.burntSienna,
+    scaffoldBackgroundColor: CustomizedColors.ebonyClay,
+    shadowColor: CustomizedColors.black.withOpacity(0.5),
+    textTheme: GoogleFonts.nunitoTextTheme().copyWith(
+      bodyText2: TextStyle(color: CustomizedColors.white),
+    ),
   );
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MenuItem extends StatefulWidget {
   final VoidCallback onPress;
@@ -20,9 +21,9 @@ class _MenuItemState extends State<MenuItem> {
 
   Color _borderColor() {
     if (widget.isActive) {
-      return Colors.yellow;
+      return Get.theme.accentColor;
     } else if (!widget.isActive & _isHover) {
-      return Colors.pink.withOpacity(0.5);
+      return Get.theme.accentColor.withOpacity(0.5);
     }
     return Colors.transparent;
   }
@@ -37,21 +38,21 @@ class _MenuItemState extends State<MenuItem> {
       },
       onTap: widget.onPress,
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 250),
+        duration: Duration(milliseconds: 1150),
         margin: EdgeInsets.symmetric(horizontal: 15),
         padding: EdgeInsets.symmetric(vertical: 5),
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
               color: _borderColor(),
-              width: 3,
+              width: 2,
             ),
           ),
         ),
         child: Text(
           widget.text,
           style: TextStyle(
-            color: widget.isActive ? Colors.yellow : Colors.white,
+            color: widget.isActive ? Get.theme.accentColor : Colors.white,
             fontWeight: widget.isActive ? FontWeight.bold : FontWeight.normal,
           ),
         ),

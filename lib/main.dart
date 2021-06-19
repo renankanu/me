@@ -16,7 +16,7 @@ void main() {
   ];
   runApp(
     GetMaterialApp(
-      title: "<RenanKanu>",
+      title: "RenanKanu;",
       translationsKeys: AppTranslation.translations,
       locale: Locale('pt', 'BR'),
       supportedLocales: supportedLocales,

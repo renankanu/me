@@ -28,9 +28,9 @@ class _CustomAppBarState extends State<CustomAppBar> {
         color: Get.theme.primaryColor,
         boxShadow: [
           BoxShadow(
-            color: Colors.black,
-            offset: Offset(0.0, 1.0),
-            blurRadius: 6.0,
+            color: Get.theme.shadowColor,
+            offset: Offset(0, 0.1),
+            blurRadius: 1,
           )
         ],
       ),
@@ -41,14 +41,14 @@ class _CustomAppBarState extends State<CustomAppBar> {
             Expanded(
               child: RichText(
                 text: TextSpan(
-                  text: '<Renan',
+                  text: 'Renan',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                       fontSize: 26),
                   children: <TextSpan>[
                     TextSpan(
-                      text: 'Kanu>',
+                      text: 'Kanu;',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w400,
