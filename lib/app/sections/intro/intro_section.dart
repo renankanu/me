@@ -33,31 +33,6 @@ class IntroSection extends StatelessWidget {
           ),
           SizedBox(height: 60),
           Terminal(),
-          Container(
-            height: 240,
-            width: 240,
-            child: Stack(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(1),
-                  child: Image.asset(
-                    CustomizedImages.me,
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 4,
-                      color: Get.theme.accentColor,
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(240 / 2),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          )
         ],
       ),
     );

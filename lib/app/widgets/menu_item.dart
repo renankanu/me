@@ -57,10 +57,6 @@ class _MenuItemState extends State<MenuItem> {
                 : Get.theme.disabledColor,
             fontWeight: widget.isActive ? FontWeight.bold : FontWeight.normal,
           ),
-          // style: TextStyle(
-          //   color: widget.isActive ? Get.theme.accentColor : Colors.white,
-          //   fontWeight: widget.isActive ? FontWeight.bold : FontWeight.normal,
-          // ),
         ),
       ),
     );
