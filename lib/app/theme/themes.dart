@@ -4,11 +4,13 @@ import 'package:me/app/core/colors.dart';
 
 class Themes {
   final lightTheme = ThemeData.light().copyWith(
+    visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.light,
     primaryColor: Colors.green,
   );
 
   final darkTheme = ThemeData.dark().copyWith(
+    visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.dark,
     primaryColor: CustomizedColors.ebonyClay,
     backgroundColor: CustomizedColors.ebonyClay,

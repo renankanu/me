@@ -4,6 +4,8 @@ abstract class CustomizedColors {
   static const transparente = Color(0x00FFFFFF);
   static const mako = Color(0xFF454650);
   static const background = Color(0xFF2D2E32);
+  static const charade = Color(0xFF282A35);
+  static const codGray = Color(0xFF1E1E1E);
   static const menu = Color(0xFF212225);
   static const magicMint = Color(0xFF96F3B2);
   static const vistaBlue = Color(0xFF80D799);
