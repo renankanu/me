@@ -51,7 +51,7 @@ class Terminal extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  '\> ',
+                  '\❯ ',
                   style: GoogleFonts.firaCode(
                     textStyle: TextStyle(
                       fontSize:

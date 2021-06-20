@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:me/app/core/colors.dart';
 import 'package:me/app/widgets/menu_item.dart';
 import 'package:me/generated/locales.g.dart';
 
@@ -41,14 +42,15 @@ class _CustomAppBarState extends State<CustomAppBar> {
             Expanded(
               child: RichText(
                 text: TextSpan(
-                  text: 'Renan',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 26),
+                  text: 'R',
+                  style: Get.textTheme.headline1?.copyWith(
+                    fontWeight: FontWeight.w900,
+                    color: CustomizedColors.white,
+                    fontSize: 26,
+                  ),
                   children: <TextSpan>[
                     TextSpan(
-                      text: 'Kanu;',
+                      text: 'K',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w400,
