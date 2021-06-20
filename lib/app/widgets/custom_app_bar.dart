@@ -35,7 +35,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 100),
         child: Row(
           children: [
             Expanded(
