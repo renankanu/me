@@ -51,10 +51,16 @@ class _MenuItemState extends State<MenuItem> {
         ),
         child: Text(
           widget.text,
-          style: TextStyle(
-            color: widget.isActive ? Get.theme.accentColor : Colors.white,
+          style: Get.textTheme.bodyText1?.copyWith(
+            color: widget.isActive
+                ? Get.theme.accentColor
+                : Get.theme.disabledColor,
             fontWeight: widget.isActive ? FontWeight.bold : FontWeight.normal,
           ),
+          // style: TextStyle(
+          //   color: widget.isActive ? Get.theme.accentColor : Colors.white,
+          //   fontWeight: widget.isActive ? FontWeight.bold : FontWeight.normal,
+          // ),
         ),
       ),
     );

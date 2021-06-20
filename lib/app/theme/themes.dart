@@ -6,7 +6,12 @@ class Themes {
   final lightTheme = ThemeData.light().copyWith(
     visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.light,
-    primaryColor: Colors.green,
+    primaryColor: Colors.white,
+    accentColor: CustomizedColors.burntSienna,
+    textTheme: GoogleFonts.poppinsTextTheme().copyWith(
+      bodyText2: TextStyle(color: CustomizedColors.ebonyClay),
+    ),
+    disabledColor: CustomizedColors.ebonyClay,
   );
 
   final darkTheme = ThemeData.dark().copyWith(
@@ -17,8 +22,7 @@ class Themes {
     accentColor: CustomizedColors.burntSienna,
     scaffoldBackgroundColor: CustomizedColors.ebonyClay,
     shadowColor: CustomizedColors.black.withOpacity(0.5),
-    textTheme: GoogleFonts.poppinsTextTheme().copyWith(
-      bodyText2: TextStyle(color: CustomizedColors.white),
-    ),
+    textTheme: GoogleFonts.poppinsTextTheme(),
+    disabledColor: CustomizedColors.white,
   );
 }
