@@ -60,18 +60,39 @@ class Terminal extends StatelessWidget {
                     ),
                   ),
                 ),
-                TypewriterAnimatedTextKit(
-                  speed: Duration(milliseconds: 200),
-                  text: [
-                    "flutter create renankanu",
-                    "cd renankanu",
-                    "flutter run -d chrome",
+                AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText(
+                      'flutter create renankanu',
+                      speed: Duration(milliseconds: 200),
+                      textStyle: TextStyle(
+                        fontSize:
+                            ResponsiveWidget.isSmallScreen(context) ? 15 : 30,
+                        color: CustomizedColors.white,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                    TypewriterAnimatedText(
+                      'cd renankanu',
+                      speed: Duration(milliseconds: 200),
+                      textStyle: TextStyle(
+                        fontSize:
+                            ResponsiveWidget.isSmallScreen(context) ? 15 : 30,
+                        color: CustomizedColors.white,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                    TypewriterAnimatedText(
+                      'flutter run -d chrome',
+                      speed: Duration(milliseconds: 200),
+                      textStyle: TextStyle(
+                        fontSize:
+                            ResponsiveWidget.isSmallScreen(context) ? 15 : 30,
+                        color: CustomizedColors.white,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
                   ],
-                  textStyle: TextStyle(
-                    fontSize: ResponsiveWidget.isSmallScreen(context) ? 15 : 30,
-                    color: CustomizedColors.white,
-                  ),
-                  textAlign: TextAlign.start,
                 ),
               ],
             ),
