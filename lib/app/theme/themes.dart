@@ -45,12 +45,12 @@ class Themes {
       ),
       headline5: GoogleFonts.rubik(
         fontSize: 24,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w700,
         letterSpacing: 0,
       ),
       headline6: GoogleFonts.rubik(
         fontSize: 20,
-        fontWeight: FontWeight.w700,
+        fontWeight: FontWeight.w900,
         letterSpacing: 0.15,
       ),
       subtitle1: GoogleFonts.rubik(
@@ -70,7 +70,7 @@ class Themes {
       ),
       bodyText2: GoogleFonts.rubik(
         fontSize: 14,
-        fontWeight: FontWeight.w700,
+        fontWeight: FontWeight.w400,
         letterSpacing: 0.25,
       ),
     ),

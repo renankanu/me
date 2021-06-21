@@ -33,7 +33,6 @@ class Terminal extends StatelessWidget {
                 text: 'kanu ',
                 style: TextStyle(
                   color: CustomizedColors.texas,
-                  fontWeight: FontWeight.w800,
                   fontSize: ResponsiveWidget.isSmallScreen(context) ? 15 : 30,
                 ),
                 children: <TextSpan>[

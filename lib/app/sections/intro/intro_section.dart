@@ -21,7 +21,7 @@ class IntroSection extends StatelessWidget {
               children: <TextSpan>[
                 TextSpan(
                   text: 'Kanu;',
-                  style: Get.textTheme.headline6?.copyWith(
+                  style: Get.textTheme.headline5?.copyWith(
                     color: CustomizedColors.burntSienna,
                     fontSize: 34,
                   ),
