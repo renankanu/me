@@ -17,6 +17,10 @@ class LocaleKeys {
   static const menu_experiences = 'menu_experiences';
   static const menu_aboutMeDescOne = 'menu_aboutMeDescOne';
   static const menu_aboutMeDescTwo = 'menu_aboutMeDescTwo';
+  static const aboutSection_tagMobileDeveloper =
+      'aboutSection_tagMobileDeveloper';
+  static const aboutSection_aboutMeDescOne = 'aboutSection_aboutMeDescOne';
+  static const aboutSection_aboutMeDescTwo = 'aboutSection_aboutMeDescTwo';
 }
 
 class Locales {
@@ -35,9 +39,9 @@ class Locales {
     'menu_skills': 'Skills',
     'menu_repositories': 'Repositórios',
     'menu_experiences': 'Experiências',
-    'menu_aboutMeDescOne':
-        'Olá, meu nome é Renan sou de Cianorte-PR. Comecei na programação em 2016 como desenvolvedor Android Nativo com Java, em 2018 comecei a programar Android Nativo com Kotlin, PHP e trabalhei com alguns serviços da AWS como: eC2, RDS, SNS, SES, S3... E no segundo semestre de 2019 comecei a programar em React Native e Flutter na Megaleios e estou até o momento.',
-    'menu_aboutMeDescTwo':
-        'Gosto de todos os assuntos que envolvem tecnologia, jogador de rugby, gosto de jogos eletrónicos, praticante de musculação e estudante de inglês. Café, café e café ☕',
+    'aboutSection_tagMobileDeveloper': 'Desenvolvedor Mobile.',
+    'aboutSection_aboutMeDescOne': 'Olá, meu nome é Renan.',
+    'aboutSection_aboutMeDescTwo':
+        'Sou desenvolvedor flutter, trabalho na Megaleios. Gosto de trabalhar em equipe, você aprenderá mais rápido e muito mais. Como diz o ditado: \'duas cabeças pensam melhor do que uma\'. Gosto de todos os assuntos que envolvem tecnologia, sou jogador de rugby, gosto de jogos eletrónicos, praticante de musculação. E adoro um café ☕',
   };
 }

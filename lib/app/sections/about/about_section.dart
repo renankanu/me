@@ -26,14 +26,33 @@ class AboutSection extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        LocaleKeys.menu_aboutMeDescOne.tr,
-                        style: Get.textTheme.headline4?.copyWith(
-                          fontSize: 24,
-                          letterSpacing: -1.5,
+                        LocaleKeys.aboutSection_aboutMeDescOne.tr,
+                        style: Get.textTheme.headline5?.copyWith(
+                          fontSize: 48,
+                          letterSpacing: 1.5,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(12),
+                            ),
+                            color: Get.theme.accentColor,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 12,
+                              horizontal: 24,
+                            ),
+                            child: Text(
+                                LocaleKeys.aboutSection_tagMobileDeveloper.tr),
+                          ),
                         ),
                       ),
                       Text(
-                        LocaleKeys.menu_aboutMeDescTwo.tr,
+                        LocaleKeys.aboutSection_aboutMeDescTwo.tr,
                         style: Get.textTheme.headline2?.copyWith(
                           fontSize: 20,
                         ),
