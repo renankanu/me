@@ -9,9 +9,13 @@ class AboutSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        AvatarImage(),
-        Container(
-          child: Text('About Section'),
+        Column(
+          children: [
+            AvatarImage(),
+            Container(
+              child: Text('About Section'),
+            ),
+          ],
         ),
       ],
     );

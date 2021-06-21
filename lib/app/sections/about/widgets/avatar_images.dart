@@ -10,8 +10,8 @@ class AvatarImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 240,
-      width: 240,
+      height: 320,
+      width: 320,
       child: Stack(
         children: [
           Padding(
@@ -27,7 +27,7 @@ class AvatarImage extends StatelessWidget {
                 color: Get.theme.accentColor,
               ),
               borderRadius: BorderRadius.all(
-                Radius.circular(240 / 2),
+                Radius.circular(320 / 2),
               ),
             ),
           ),
