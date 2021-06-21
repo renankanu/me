@@ -21,6 +21,13 @@ class Terminal extends StatelessWidget {
           borderRadius: BorderRadius.all(
             Radius.circular(6),
           ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.3),
+              offset: Offset(0, 1), //(x,y)
+              blurRadius: 4,
+            ),
+          ],
         ),
         child: Padding(
           padding: EdgeInsets.only(
@@ -68,6 +75,7 @@ class Terminal extends StatelessWidget {
                     ),
                   ),
                   AnimatedTextKit(
+                    repeatForever: true,
                     animatedTexts: [
                       TypewriterAnimatedText(
                         'flutter create renankanu',
