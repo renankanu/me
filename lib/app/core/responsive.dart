@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ResponsiveWidget {
-  ResponsiveWidget._();
+class CustomizedResponsive {
+  CustomizedResponsive._();
 
   static bool isSmallScreen(BuildContext context) {
     return MediaQuery.of(context).size.width < 800;

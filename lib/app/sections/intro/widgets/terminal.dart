@@ -27,7 +27,7 @@ class Terminal extends StatelessWidget {
             left: 12,
             top: 8,
             right: 12,
-            bottom: ResponsiveWidget.getHeight(context, 0.15),
+            bottom: CustomizedResponsive.getHeight(context, 0.15),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,7 +39,8 @@ class Terminal extends StatelessWidget {
                   text: 'kanu ',
                   style: TextStyle(
                     color: CustomizedColors.texas,
-                    fontSize: ResponsiveWidget.isSmallScreen(context) ? 15 : 30,
+                    fontSize:
+                        CustomizedResponsive.isSmallScreen(context) ? 15 : 30,
                   ),
                   children: <TextSpan>[
                     TextSpan(
@@ -59,8 +60,9 @@ class Terminal extends StatelessWidget {
                     '\❯ ',
                     style: GoogleFonts.firaCode(
                       textStyle: TextStyle(
-                        fontSize:
-                            ResponsiveWidget.isSmallScreen(context) ? 15 : 30,
+                        fontSize: CustomizedResponsive.isSmallScreen(context)
+                            ? 15
+                            : 30,
                         color: CustomizedColors.mantis,
                       ),
                     ),
@@ -71,8 +73,9 @@ class Terminal extends StatelessWidget {
                         'flutter create renankanu',
                         speed: Duration(milliseconds: 200),
                         textStyle: TextStyle(
-                          fontSize:
-                              ResponsiveWidget.isSmallScreen(context) ? 15 : 30,
+                          fontSize: CustomizedResponsive.isSmallScreen(context)
+                              ? 15
+                              : 30,
                           color: CustomizedColors.white,
                         ),
                         textAlign: TextAlign.start,
@@ -81,8 +84,9 @@ class Terminal extends StatelessWidget {
                         'cd renankanu',
                         speed: Duration(milliseconds: 200),
                         textStyle: TextStyle(
-                          fontSize:
-                              ResponsiveWidget.isSmallScreen(context) ? 15 : 30,
+                          fontSize: CustomizedResponsive.isSmallScreen(context)
+                              ? 15
+                              : 30,
                           color: CustomizedColors.white,
                         ),
                         textAlign: TextAlign.start,
@@ -91,8 +95,9 @@ class Terminal extends StatelessWidget {
                         'flutter run -d chrome',
                         speed: Duration(milliseconds: 200),
                         textStyle: TextStyle(
-                          fontSize:
-                              ResponsiveWidget.isSmallScreen(context) ? 15 : 30,
+                          fontSize: CustomizedResponsive.isSmallScreen(context)
+                              ? 15
+                              : 30,
                           color: CustomizedColors.white,
                         ),
                         textAlign: TextAlign.start,
