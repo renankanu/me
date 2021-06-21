@@ -11,6 +11,7 @@ class IntroSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseSectionContainer(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           RichText(
             text: TextSpan(

@@ -11,25 +11,27 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(
-          children: [
-            CustomAppBar(),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      IntroSection(),
-                      AboutSection(),
-                      Text('Text 2'),
-                    ],
+      body: SafeArea(
+        child: Container(
+          child: Column(
+            children: [
+              CustomAppBar(),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        IntroSection(),
+                        AboutSection(),
+                        Text('Text 2'),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
