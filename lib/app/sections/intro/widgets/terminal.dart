@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:me/app/core/colors.dart';
 import 'package:me/app/core/responsive.dart';
@@ -24,7 +25,7 @@ class Terminal extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.3),
-              offset: Offset(0, 1), //(x,y)
+              offset: Offset(0, 1),
               blurRadius: 4,
             ),
           ],
@@ -64,12 +65,12 @@ class Terminal extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    '\❯ ',
+                    '❯ ',
                     style: GoogleFonts.firaCode(
-                      textStyle: TextStyle(
+                      textStyle: Get.textTheme.bodyText2?.copyWith(
                         fontSize: CustomizedResponsive.isSmallScreen(context)
                             ? 15
-                            : 30,
+                            : 22,
                         color: CustomizedColors.mantis,
                       ),
                     ),
