@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:me/app/animations/animations.dart';
+import 'package:me/app/widgets/base_section_container.dart';
 
 import 'widgets/avatar_images.dart';
 
@@ -7,17 +9,19 @@ class AboutSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Column(
-          children: [
-            AvatarImage(),
-            Container(
-              child: Text('About Section'),
-            ),
-          ],
-        ),
-      ],
+    return BaseSectionContainer(
+      child: Column(
+        children: [
+          Row(
+            children: [
+              ScaleAnimation(child: AvatarImage()),
+              Container(
+                child: Text('About Section'),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

@@ -16,6 +16,7 @@ dependencies:
   get: 4.1.4
   google_fonts: ^2.1.0
   url_strategy: ^0.2.0
+  visibility_detector: ^0.2.0
 
 dev_dependencies:
   flutter_test:

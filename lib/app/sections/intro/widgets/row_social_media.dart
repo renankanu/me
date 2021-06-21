@@ -50,23 +50,26 @@ class SocialMediaButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(20),
-      onTap: onPressSocialMedia,
-      child: Container(
-        height: 42,
-        width: 42,
-        margin: EdgeInsets.symmetric(horizontal: 8),
-        decoration: BoxDecoration(
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(42 / 2),
+        onTap: onPressSocialMedia,
+        child: Container(
+          height: 42,
+          width: 42,
+          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(60),
             border: Border.all(
               width: 2,
               color: Get.theme.accentColor,
-            )),
-        child: Center(
-          child: FaIcon(
-            icon,
-            color: Get.theme.accentColor,
+            ),
+          ),
+          child: Center(
+            child: FaIcon(
+              icon,
+              color: Get.theme.accentColor,
+            ),
           ),
         ),
       ),
