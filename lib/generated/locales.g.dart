@@ -21,6 +21,7 @@ class LocaleKeys {
       'aboutSection_tagMobileDeveloper';
   static const aboutSection_aboutMeDescOne = 'aboutSection_aboutMeDescOne';
   static const aboutSection_aboutMeDescTwo = 'aboutSection_aboutMeDescTwo';
+  static const skillsSection_thingsIDo = 'skillsSection_thingsIDo';
 }
 
 class Locales {
@@ -43,5 +44,6 @@ class Locales {
     'aboutSection_aboutMeDescOne': 'Olá, meu nome é Renan.',
     'aboutSection_aboutMeDescTwo':
         'Sou desenvolvedor flutter, trabalho na Megaleios. Gosto de trabalhar em equipe, você aprenderá mais rápido e muito mais. Como diz o ditado: \'duas cabeças pensam melhor do que uma\'. Gosto de todos os assuntos que envolvem tecnologia, sou jogador de rugby, gosto de jogos eletrónicos, praticante de musculação. E adoro um café ☕',
+    'skillsSection_thingsIDo': 'Coisas que eu faço e sei fazer',
   };
 }
