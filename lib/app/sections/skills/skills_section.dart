@@ -17,21 +17,24 @@ class SkillsSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TitleSection(titleSection: LocaleKeys.menu_skills.tr),
-            SizedBox(height: 32),
-            Center(
-                child: Wrap(
-              spacing: 60,
-              runSpacing: 60,
-              children: [
-                ItemSkill(label: 'Title', icon: 'Icon'),
-                ItemSkill(label: 'Title', icon: 'Icon')
-              ],
-            )),
-            SizedBox(height: 32),
             Text(
               LocaleKeys.skillsSection_thingsIDo.tr,
               style: Get.textTheme.subtitle1?.copyWith(fontSize: 20),
             ),
+            SizedBox(height: 32),
+            Center(
+                child: Wrap(
+              spacing: 60,
+              runSpacing: 58,
+              children: [
+                ItemSkill(label: 'Title', icon: 'Icon'),
+                ItemSkill(label: 'Title', icon: 'Icon'),
+                ItemSkill(label: 'Title', icon: 'Icon'),
+                ItemSkill(label: 'Title', icon: 'Icon'),
+                ItemSkill(label: 'Title', icon: 'Icon'),
+                ItemSkill(label: 'Title', icon: 'Icon'),
+              ],
+            )),
           ],
         ),
       ),

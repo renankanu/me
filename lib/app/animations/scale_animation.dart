@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-class ScaleAnimation extends StatefulWidget {
-  const ScaleAnimation({
+class ScaleAnimationTitleSection extends StatefulWidget {
+  const ScaleAnimationTitleSection({
     Key? key,
     required this.child,
     this.percentToShow = 75,
@@ -14,10 +14,11 @@ class ScaleAnimation extends StatefulWidget {
   final int percentToHide;
 
   @override
-  _ScaleAnimationState createState() => _ScaleAnimationState();
+  _ScaleAnimationTitleSectionState createState() =>
+      _ScaleAnimationTitleSectionState();
 }
 
-class _ScaleAnimationState extends State<ScaleAnimation>
+class _ScaleAnimationTitleSectionState extends State<ScaleAnimationTitleSection>
     with TickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<double> _animation;

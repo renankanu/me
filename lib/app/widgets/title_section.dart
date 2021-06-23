@@ -11,7 +11,7 @@ class TitleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScaleAnimation(
+    return ScaleAnimationTitleSection(
       child: Container(
         margin: EdgeInsets.only(bottom: 120),
         child: Row(
