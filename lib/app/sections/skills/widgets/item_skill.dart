@@ -65,14 +65,13 @@ class _ItemSkillState extends State<ItemSkill> with TickerProviderStateMixin {
           decoration: BoxDecoration(
             color: Get.theme.hintColor,
             borderRadius: BorderRadius.circular(6),
-            border: Border.all(color: CustomizedColors.alto),
+            border: Border.all(color: Get.theme.dividerColor),
             boxShadow: _isHover
                 ? [
                     BoxShadow(
                       color: Get.theme.dividerColor,
-                      offset: Offset(1, 2),
-                      blurRadius: 7,
-                      spreadRadius: 2,
+                      offset: Offset(0, 1),
+                      blurRadius: 3,
                     ),
                   ]
                 : null,
