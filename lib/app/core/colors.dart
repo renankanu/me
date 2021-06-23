@@ -16,6 +16,7 @@ abstract class CustomizedColors {
   static const casablanca = Color(0xFFF4BE4F);
   static const mantis = Color(0xFF62C655);
   static const silver = Color(0xFFCCCCCC);
+  static const alto = Color(0xFFDFDFDF);
 
   //NEW THEME
   static const ebonyClay = Color(0xFF202234);

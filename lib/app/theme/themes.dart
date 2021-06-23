@@ -23,6 +23,7 @@ class Themes {
     scaffoldBackgroundColor: CustomizedColors.ebonyClay,
     hintColor: CustomizedColors.mirage,
     shadowColor: CustomizedColors.black.withOpacity(0.5),
+    dividerColor: CustomizedColors.alto,
     textTheme: GoogleFonts.rubikTextTheme().copyWith(
       headline1: GoogleFonts.rubik(
         fontSize: 96,

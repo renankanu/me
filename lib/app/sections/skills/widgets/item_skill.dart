@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:me/app/core/colors.dart';
 
 class ItemSkill extends StatefulWidget {
   const ItemSkill({
@@ -61,12 +63,13 @@ class _ItemSkillState extends State<ItemSkill> with TickerProviderStateMixin {
           width: 240,
           height: 240,
           decoration: BoxDecoration(
-            color: Get.theme.accentColor,
+            color: Get.theme.hintColor,
             borderRadius: BorderRadius.circular(6),
+            border: Border.all(color: CustomizedColors.alto),
             boxShadow: _isHover
                 ? [
                     BoxShadow(
-                      color: Get.theme.shadowColor,
+                      color: Get.theme.dividerColor,
                       offset: Offset(1, 2),
                       blurRadius: 7,
                       spreadRadius: 2,
@@ -75,9 +78,20 @@ class _ItemSkillState extends State<ItemSkill> with TickerProviderStateMixin {
                 : null,
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(widget.label),
-              Text(widget.icon),
+              SizedBox(height: 24),
+              Visibility(
+                visible: widget.icon != '',
+                child: Image.asset(
+                  widget.icon,
+                  height: 120,
+                ),
+                replacement: FlutterLogo(
+                  size: 120,
+                ),
+              )
             ],
           ),
         ),
