@@ -10,4 +10,5 @@ abstract class CustomizedImages {
   static const String icReactNative = 'assets/images/ic_react_native.png';
   static const String icFirebase = 'assets/images/ic_firebase.png';
   static const String icAws = 'assets/images/ic_aws.png';
+  static const String bg = 'assets/images/3703.png';
 }

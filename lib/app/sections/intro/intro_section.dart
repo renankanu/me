@@ -13,6 +13,7 @@ class IntroSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseSectionContainer(
       background: Get.theme.hintColor,
+      hasImageBackground: true,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

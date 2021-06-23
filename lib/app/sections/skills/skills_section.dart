@@ -15,12 +15,12 @@ class SkillsSection extends StatelessWidget {
       background: Get.theme.hintColor,
       child: Container(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TitleSection(titleSection: LocaleKeys.menu_skills.tr),
+            SizedBox(height: 32),
             Text(
               LocaleKeys.skillsSection_thingsIDo.tr,
-              style: Get.textTheme.subtitle1?.copyWith(fontSize: 20),
+              style: Get.textTheme.bodyText2?.copyWith(fontSize: 18),
             ),
             SizedBox(height: 32),
             Center(
