@@ -21,29 +21,33 @@ class BaseSectionContainer extends StatelessWidget {
     return Container(
       width: double.infinity,
       color: background ?? Get.theme.primaryColor,
-      child: Stack(
-        children: [
-          Visibility(
-            visible: hasImageBackground!,
-            child: Opacity(
-              opacity: 0.1,
-              child: Image.asset(
-                CustomizedImages.bg,
+      child: LayoutBuilder(builder: (context, constraint) {
+        return Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Visibility(
+              visible: hasImageBackground!,
+              child: Opacity(
+                opacity: 0.1,
+                child: Image.asset(
+                  CustomizedImages.bg,
+                  height: constraint.maxWidth * .432,
+                ),
               ),
             ),
-          ),
-          Center(
-            child: Container(
-              width: 960,
-              constraints: BoxConstraints(minHeight: height - heightAppBar),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 60),
-                child: child,
+            Center(
+              child: Container(
+                width: 960,
+                constraints: BoxConstraints(minHeight: height - heightAppBar),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 60),
+                  child: child,
+                ),
               ),
             ),
-          ),
-        ],
-      ),
+          ],
+        );
+      }),
     );
   }
 }
