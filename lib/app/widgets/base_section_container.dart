@@ -25,8 +25,12 @@ class BaseSectionContainer extends StatelessWidget {
         children: [
           Visibility(
             visible: hasImageBackground!,
-            child:
-                Opacity(opacity: 0.1, child: Image.asset(CustomizedImages.bg)),
+            child: Opacity(
+              opacity: 0.1,
+              child: Image.asset(
+                CustomizedImages.bg,
+              ),
+            ),
           ),
           Center(
             child: Container(
