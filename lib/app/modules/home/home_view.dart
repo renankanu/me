@@ -15,31 +15,34 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
+    var height = AppBar().preferredSize.height;
     return Scaffold(
       appBar: isWeb(context) ? null : AppBar(),
       drawer: isWeb(context) ? null : Container(),
       body: SafeArea(
         child: Container(
-          child: Column(
+          child: Stack(
             children: [
-              Visibility(
-                visible: isWeb(context),
-                child: CustomAppBar(),
-              ),
               Expanded(
-                child: Container(
-                  width: double.infinity,
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        IntroSection(),
-                        AboutSection(),
-                        SkillsSection(),
-                        Text('Text 2'),
-                      ],
+                child: Padding(
+                  padding: EdgeInsets.only(top: isWeb(context) ? height : 0),
+                  child: Container(
+                    width: double.infinity,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          IntroSection(),
+                          AboutSection(),
+                          SkillsSection(),
+                        ],
+                      ),
                     ),
                   ),
                 ),
+              ),
+              Visibility(
+                visible: isWeb(context),
+                child: CustomAppBar(),
               ),
             ],
           ),

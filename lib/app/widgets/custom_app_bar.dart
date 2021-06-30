@@ -29,9 +29,9 @@ class _CustomAppBarState extends State<CustomAppBar> {
         color: Get.theme.primaryColor,
         boxShadow: [
           BoxShadow(
-            color: Get.theme.shadowColor,
-            offset: Offset(0, 0.1),
-            blurRadius: 1,
+            color: Colors.black.withOpacity(0.3),
+            offset: Offset(0, 1),
+            blurRadius: 4,
           )
         ],
       ),
