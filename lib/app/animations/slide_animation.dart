@@ -14,7 +14,7 @@ class SlideAnimation extends StatefulWidget {
 }
 
 class _SlideAnimationState extends State<SlideAnimation>
-    with SingleTickerProviderStateMixin {
+    with SingleTickerProviderStateMixin<SlideAnimation> {
   late final AnimationController _controller;
   late final Animation<Offset> _offsetAnimation;
 

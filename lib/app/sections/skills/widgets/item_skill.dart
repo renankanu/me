@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
-import 'package:me/app/core/colors.dart';
 
 class ItemSkill extends StatefulWidget {
   const ItemSkill({
@@ -16,7 +15,8 @@ class ItemSkill extends StatefulWidget {
   _ItemSkillState createState() => _ItemSkillState();
 }
 
-class _ItemSkillState extends State<ItemSkill> with TickerProviderStateMixin {
+class _ItemSkillState extends State<ItemSkill>
+    with TickerProviderStateMixin<ItemSkill> {
   late final AnimationController _controller;
   late final Animation<double> _animation;
   bool _isHover = false;

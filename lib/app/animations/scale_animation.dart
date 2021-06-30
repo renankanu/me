@@ -19,7 +19,7 @@ class ScaleAnimationTitleSection extends StatefulWidget {
 }
 
 class _ScaleAnimationTitleSectionState extends State<ScaleAnimationTitleSection>
-    with TickerProviderStateMixin {
+    with TickerProviderStateMixin<ScaleAnimationTitleSection> {
   late final AnimationController _controller;
   late final Animation<double> _animation;
 
