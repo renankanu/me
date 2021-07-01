@@ -23,19 +23,17 @@ class HomeView extends GetView<HomeController> {
         child: Container(
           child: Stack(
             children: [
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.only(top: isWeb(context) ? height : 0),
-                  child: Container(
-                    width: double.infinity,
-                    child: SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          IntroSection(),
-                          AboutSection(),
-                          SkillsSection(),
-                        ],
-                      ),
+              Padding(
+                padding: EdgeInsets.only(top: isWeb(context) ? height : 0),
+                child: Container(
+                  width: double.infinity,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        IntroSection(),
+                        AboutSection(),
+                        SkillsSection(),
+                      ],
                     ),
                   ),
                 ),
