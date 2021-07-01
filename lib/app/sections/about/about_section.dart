@@ -13,32 +13,36 @@ class AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseSectionContainer(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          TitleSection(titleSection: LocaleKeys.menu_about.tr),
-          SizedBox(height: 180),
-          Visibility(
-            visible: !CustomizedResponsive.isSmallScreen(context),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                AvatarImage(),
-                SizedBox(width: 30),
-                Expanded(
-                  child: Description(),
-                ),
-              ],
-            ),
-            replacement: Column(
-              children: [
-                AvatarImage(),
-                SizedBox(height: 30),
-                Description(),
-              ],
-            ),
-          )
-        ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            TitleSection(titleSection: LocaleKeys.menu_about.tr),
+            SizedBox(
+                height: CustomizedResponsive.isSmallScreen(context) ? 90 : 180),
+            Visibility(
+              visible: !CustomizedResponsive.isSmallScreen(context),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AvatarImage(),
+                  SizedBox(width: 30),
+                  Expanded(
+                    child: Description(),
+                  ),
+                ],
+              ),
+              replacement: Column(
+                children: [
+                  AvatarImage(),
+                  SizedBox(height: 30),
+                  Description(),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -55,8 +59,9 @@ class Description extends StatelessWidget {
       children: [
         Text(
           LocaleKeys.aboutSection_aboutMeDescOne.tr,
+          textAlign: TextAlign.center,
           style: Get.textTheme.headline5?.copyWith(
-            fontSize: 48,
+            fontSize: CustomizedResponsive.isSmallScreen(context) ? 36 : 48,
             letterSpacing: 1.5,
           ),
         ),
@@ -80,6 +85,7 @@ class Description extends StatelessWidget {
         ),
         Text(
           LocaleKeys.aboutSection_aboutMeDescTwo.tr,
+          textAlign: TextAlign.center,
           style: Get.textTheme.headline2?.copyWith(
             fontSize: 20,
           ),
