@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:me/app/core/core.dart';
 import 'package:me/app/core/image.dart';
 
 class AvatarImage extends StatelessWidget {
@@ -9,9 +10,16 @@ class AvatarImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double getSize() {
+      if (CustomizedResponsive.isSmallScreen(context)) {
+        return 160;
+      }
+      return 320;
+    }
+
     return Container(
-      height: 320,
-      width: 320,
+      height: getSize(),
+      width: getSize(),
       child: Stack(
         children: [
           Padding(
@@ -27,7 +35,7 @@ class AvatarImage extends StatelessWidget {
                 color: Get.theme.accentColor,
               ),
               borderRadius: BorderRadius.all(
-                Radius.circular(320 / 2),
+                Radius.circular(getSize() / 2),
               ),
             ),
           ),
