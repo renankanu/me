@@ -44,7 +44,6 @@ class RepoSection extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.only(top: 60),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Wrap(
                       runSpacing: 20,
@@ -63,10 +62,11 @@ class RepoSection extends StatelessWidget {
                         horizontal: 6,
                         vertical: 16,
                       ),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Row(
+                      child: Expanded(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Row(
                               children: [
                                 Text(
                                   LocaleKeys.repoSection_totalCommits.tr,
@@ -83,9 +83,7 @@ class RepoSection extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ),
-                          Expanded(
-                            child: Row(
+                            Row(
                               children: [
                                 Text(
                                   LocaleKeys.repoSection_totalStars.tr,
@@ -100,9 +98,9 @@ class RepoSection extends StatelessWidget {
                                       .copyWith(fontSize: 16),
                                 ),
                               ],
-                            ),
-                          )
-                        ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ],

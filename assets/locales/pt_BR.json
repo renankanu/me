@@ -14,9 +14,10 @@
         "thingsIDo": "Coisas que eu faço e sei fazer"
     },
     "repoSection": {
+        "favoriteRepo": "Repositórios favoritos",
         "myRepo": "Meus Repositórios",
         "loadRepo": "Carregando Repositórios",
         "totalCommits": "Total de commits: ",
-        "totalStars": "Total de estrelas: "
+        "totalRepo": "Total de repositórios: "
     }
 }
