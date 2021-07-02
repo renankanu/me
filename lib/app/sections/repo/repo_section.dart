@@ -45,6 +45,13 @@ class RepoSection extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 60),
                 child: Column(
                   children: [
+                    Text(LocaleKeys.repoSection_favoriteRepo.tr),
+                    Container(
+                      height: 1,
+                      color: Colors.red,
+                      width: 100,
+                    ),
+                    SizedBox(height: 16),
                     Wrap(
                       runSpacing: 20,
                       spacing: 20,
@@ -62,45 +69,43 @@ class RepoSection extends StatelessWidget {
                         horizontal: 6,
                         vertical: 16,
                       ),
-                      child: Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  LocaleKeys.repoSection_totalCommits.tr,
-                                  style: Get.textTheme.headline4!
-                                      .copyWith(fontSize: 16),
-                                ),
-                                Text(
-                                  result.data!['viewer']
-                                          ['contributionsCollection']
-                                          ['totalCommitContributions']
-                                      .toString(),
-                                  style: Get.textTheme.headline5!
-                                      .copyWith(fontSize: 16),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Text(
-                                  LocaleKeys.repoSection_totalStars.tr,
-                                  style: Get.textTheme.headline4!
-                                      .copyWith(fontSize: 16),
-                                ),
-                                Text(
-                                  result.data!['viewer']['repositories']
-                                          ['totalCount']
-                                      .toString(),
-                                  style: Get.textTheme.headline5!
-                                      .copyWith(fontSize: 16),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                LocaleKeys.repoSection_totalCommits.tr,
+                                style: Get.textTheme.headline4!
+                                    .copyWith(fontSize: 16),
+                              ),
+                              Text(
+                                result.data!['viewer']
+                                        ['contributionsCollection']
+                                        ['totalCommitContributions']
+                                    .toString(),
+                                style: Get.textTheme.headline5!
+                                    .copyWith(fontSize: 16),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                LocaleKeys.repoSection_totalRepo.tr,
+                                style: Get.textTheme.headline4!
+                                    .copyWith(fontSize: 16),
+                              ),
+                              Text(
+                                result.data!['viewer']['repositories']
+                                        ['totalCount']
+                                    .toString(),
+                                style: Get.textTheme.headline5!
+                                    .copyWith(fontSize: 16),
+                              ),
+                            ],
+                          )
+                        ],
                       ),
                     ),
                   ],
