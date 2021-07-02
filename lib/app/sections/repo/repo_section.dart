@@ -59,19 +59,49 @@ class RepoSection extends StatelessWidget {
                       ).toList(),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 6),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 6,
+                        vertical: 16,
+                      ),
                       child: Row(
                         children: [
-                          Text('Total de commits: '),
-                          Text(
-                            result.data!['viewer']['contributionsCollection']
-                                    ['totalCommitContributions']
-                                .toString(),
+                          Expanded(
+                            child: Row(
+                              children: [
+                                Text(
+                                  LocaleKeys.repoSection_totalCommits.tr,
+                                  style: Get.textTheme.headline4!
+                                      .copyWith(fontSize: 16),
+                                ),
+                                Text(
+                                  result.data!['viewer']
+                                          ['contributionsCollection']
+                                          ['totalCommitContributions']
+                                      .toString(),
+                                  style: Get.textTheme.headline5!
+                                      .copyWith(fontSize: 16),
+                                ),
+                              ],
+                            ),
                           ),
-                          Text(
-                            result.data!['viewer']['repositories']['totalCount']
-                                .toString(),
-                          ),
+                          Expanded(
+                            child: Row(
+                              children: [
+                                Text(
+                                  LocaleKeys.repoSection_totalStars.tr,
+                                  style: Get.textTheme.headline4!
+                                      .copyWith(fontSize: 16),
+                                ),
+                                Text(
+                                  result.data!['viewer']['repositories']
+                                          ['totalCount']
+                                      .toString(),
+                                  style: Get.textTheme.headline5!
+                                      .copyWith(fontSize: 16),
+                                ),
+                              ],
+                            ),
+                          )
                         ],
                       ),
                     ),

@@ -24,6 +24,8 @@ class LocaleKeys {
   static const skillsSection_thingsIDo = 'skillsSection_thingsIDo';
   static const repoSection_myRepo = 'repoSection_myRepo';
   static const repoSection_loadRepo = 'repoSection_loadRepo';
+  static const repoSection_totalCommits = 'repoSection_totalCommits';
+  static const repoSection_totalStars = 'repoSection_totalStars';
 }
 
 class Locales {
@@ -49,5 +51,7 @@ class Locales {
     'skillsSection_thingsIDo': 'Coisas que eu faço e sei fazer',
     'repoSection_myRepo': 'Meus Repositórios',
     'repoSection_loadRepo': 'Carregando Repositórios',
+    'repoSection_totalCommits': 'Total de commits: ',
+    'repoSection_totalStars': 'Total de estrelas: ',
   };
 }
