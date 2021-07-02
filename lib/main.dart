@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:me/app/modules/not_found/not_found_view.dart';
 import 'package:me/generated/locales.g.dart';
 import 'package:url_strategy/url_strategy.dart';
 
@@ -34,6 +35,11 @@ void main() {
         return supportedLocales.first;
       },
       initialRoute: AppPages.INITIAL,
+      unknownRoute: GetPage(
+        name: 'not-found',
+        page: () => NotFoundView(),
+        transition: Transition.leftToRightWithFade,
+      ),
       getPages: AppPages.routes,
       theme: Themes().lightTheme,
       themeMode: ThemeMode.system,
