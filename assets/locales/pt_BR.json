@@ -12,5 +12,9 @@
     },
     "skillsSection": {
         "thingsIDo": "Coisas que eu faço e sei fazer"
+    },
+    "repoSection": {
+        "myRepo": "Meus Repositórios",
+        "loadRepo": "Carregando Repositórios"
     }
 }
