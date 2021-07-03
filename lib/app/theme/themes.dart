@@ -24,6 +24,7 @@ class Themes {
     hintColor: CustomizedColors.mirage,
     shadowColor: CustomizedColors.black.withOpacity(0.5),
     dividerColor: CustomizedColors.alto.withOpacity(0.5),
+    cardColor: CustomizedColors.white,
     textTheme: GoogleFonts.rubikTextTheme().copyWith(
       headline1: GoogleFonts.rubik(
         fontSize: 96,

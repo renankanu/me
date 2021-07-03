@@ -1,10 +1,13 @@
+import 'dart:async';
+
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  final count = 0.obs;
+  final isInitialLoading = true.obs;
   @override
   void onInit() {
     super.onInit();
+    initFakeLoading();
   }
 
   @override
@@ -14,5 +17,13 @@ class HomeController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
+  void initFakeLoading() {
+    Timer.periodic(
+      Duration(seconds: 4),
+      (timer) {
+        isInitialLoading.value = false;
+      },
+    );
+  }
 }
