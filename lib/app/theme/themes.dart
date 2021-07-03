@@ -25,6 +25,7 @@ class Themes {
     shadowColor: CustomizedColors.black.withOpacity(0.5),
     dividerColor: CustomizedColors.alto.withOpacity(0.5),
     cardColor: CustomizedColors.white,
+    disabledColor: CustomizedColors.white,
     textTheme: GoogleFonts.rubikTextTheme().copyWith(
       headline1: GoogleFonts.rubik(
         fontSize: 96,
@@ -87,6 +88,5 @@ class Themes {
         color: CustomizedColors.white,
       ),
     ),
-    disabledColor: CustomizedColors.white,
   );
 }
