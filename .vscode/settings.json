@@ -1,6 +1,7 @@
 {
     "dart.flutterSdkPath": "/Users/renankanu/fvm/versions/stable",
     "conventionalCommits.scopes": [
-        "feature"
+        "feature",
+        "refactor"
     ]
 }

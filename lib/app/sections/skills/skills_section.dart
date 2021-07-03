@@ -18,11 +18,13 @@ class SkillsSection extends StatelessWidget {
           children: [
             TitleSection(titleSection: LocaleKeys.menu_skills.tr),
             SizedBox(height: 32),
-            Text(
-              LocaleKeys.skillsSection_thingsIDo.tr,
-              style: Get.textTheme.bodyText2?.copyWith(fontSize: 18),
+            Text(LocaleKeys.skillsSection_thingsIDo.tr),
+            Container(
+              height: 1,
+              color: Get.theme.accentColor,
+              width: 100,
             ),
-            SizedBox(height: 32),
+            SizedBox(height: 16),
             Center(
                 child: Wrap(
               spacing: 60,
