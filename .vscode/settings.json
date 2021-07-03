@@ -1,3 +1,6 @@
 {
-    "dart.flutterSdkPath": "/Users/renankanu/fvm/versions/stable"
+    "dart.flutterSdkPath": "/Users/renankanu/fvm/versions/stable",
+    "conventionalCommits.scopes": [
+        "feature"
+    ]
 }

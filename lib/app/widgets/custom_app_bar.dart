@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:me/app/core/colors.dart';
+import 'package:me/app/core/core.dart';
 import 'package:me/app/widgets/menu_item.dart';
 import 'package:me/generated/locales.g.dart';
 
@@ -20,6 +21,13 @@ class _CustomAppBarState extends State<CustomAppBar> {
     LocaleKeys.menu_experiences.tr
   ];
   var selectedItemIndex = -1;
+  final List<BuildContext> contexts = [
+    SectionKeys.about.currentContext!,
+    SectionKeys.skills.currentContext!,
+    SectionKeys.repo.currentContext!,
+    // SectionKeys.xp.currentContext!,
+  ];
+
   @override
   Widget build(BuildContext context) {
     var height = AppBar().preferredSize.height;
@@ -70,6 +78,9 @@ class _CustomAppBarState extends State<CustomAppBar> {
                       setState(() {
                         selectedItemIndex = index;
                       });
+                      scrollToSpecificContext(
+                        contexts[index],
+                      );
                     },
                     isActive: selectedItemIndex == index,
                     text: navItems[index],
@@ -93,6 +104,14 @@ class _CustomAppBarState extends State<CustomAppBar> {
           ],
         ),
       ),
+    );
+  }
+
+  void scrollToSpecificContext(BuildContext context) {
+    Scrollable.ensureVisible(
+      context,
+      duration: Duration(milliseconds: 2500),
+      curve: Curves.fastOutSlowIn,
     );
   }
 }

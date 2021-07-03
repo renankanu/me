@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:loading_animations/loading_animations.dart';
 import 'package:me/app/core/core.dart';
 import 'package:me/app/sections/about/about_section.dart';
 import 'package:me/app/sections/intro/intro_section.dart';
@@ -10,6 +9,7 @@ import 'package:me/app/sections/skills/skills_section.dart';
 import 'package:me/app/widgets/custom_app_bar.dart';
 
 import 'home_controller.dart';
+import 'widgets/initial_loading.dart';
 
 class HomeView extends GetView<HomeController> {
   bool isWeb(BuildContext context) {
@@ -34,9 +34,9 @@ class HomeView extends GetView<HomeController> {
                     child: Column(
                       children: [
                         IntroSection(),
-                        AboutSection(),
-                        SkillsSection(),
-                        RepoSection(),
+                        AboutSection(key: SectionKeys.about),
+                        SkillsSection(key: SectionKeys.skills),
+                        RepoSection(key: SectionKeys.repo),
                       ],
                     ),
                   ),
@@ -47,40 +47,7 @@ class HomeView extends GetView<HomeController> {
                 ),
               ],
             ),
-            replacement: Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  RichText(
-                    text: TextSpan(
-                      text: 'R',
-                      style: Get.textTheme.headline1?.copyWith(
-                        fontWeight: FontWeight.w900,
-                        color: CustomizedColors.white,
-                        fontSize: 26,
-                      ),
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: 'K',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 26,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  LoadingBouncingGrid.square(
-                    size: 40,
-                    backgroundColor: Get.theme.cardColor,
-                    duration: Duration(seconds: 1),
-                  ),
-                ],
-              ),
-            ),
+            replacement: InitialLoading(),
           ),
         ),
       ),
