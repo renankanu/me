@@ -26,26 +26,31 @@ class HomeView extends GetView<HomeController> {
         child: Obx(
           () => Visibility(
             visible: !controller.isInitialLoading.value,
-            child: Stack(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(top: isWeb(context) ? height : 0),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        IntroSection(),
-                        AboutSection(key: SectionKeys.about),
-                        SkillsSection(key: SectionKeys.skills),
-                        RepoSection(key: SectionKeys.repo),
-                      ],
+            child: Banner(
+              message: 'Flutter',
+              color: Get.theme.accentColor,
+              location: BannerLocation.topEnd,
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: isWeb(context) ? height : 0),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          IntroSection(),
+                          AboutSection(key: SectionKeys.about),
+                          SkillsSection(key: SectionKeys.skills),
+                          RepoSection(key: SectionKeys.repo),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                Visibility(
-                  visible: isWeb(context),
-                  child: CustomAppBar(),
-                ),
-              ],
+                  Visibility(
+                    visible: isWeb(context),
+                    child: CustomAppBar(),
+                  ),
+                ],
+              ),
             ),
             replacement: InitialLoading(),
           ),

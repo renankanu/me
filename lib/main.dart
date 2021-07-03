@@ -15,11 +15,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setPathUrlStrategy();
   await dotenv.load(fileName: ".env");
-  runApp(MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
         title: "RenanKanu;",
         translationsKeys: AppTranslation.translations,
         locale: Locale('pt', 'BR'),
+        debugShowCheckedModeBanner: false,
         supportedLocales: supportedLocales,
         localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
           GlobalMaterialLocalizations.delegate
