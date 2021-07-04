@@ -41,6 +41,7 @@ class HomeView extends GetView<HomeController> {
                           AboutSection(key: SectionKeys.about),
                           SkillsSection(key: SectionKeys.skills),
                           RepoSection(key: SectionKeys.repo),
+                          Container(key: SectionKeys.xp),
                         ],
                       ),
                     ),

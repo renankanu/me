@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:me/app/core/colors.dart';
 import 'package:me/app/core/core.dart';
+import 'package:me/app/modules/home/home_controller.dart';
 import 'package:me/app/widgets/menu_item.dart';
 import 'package:me/generated/locales.g.dart';
 
@@ -14,18 +15,18 @@ class CustomAppBar extends StatefulWidget {
 }
 
 class _CustomAppBarState extends State<CustomAppBar> {
+  final HomeController controller = Get.put(HomeController());
   final navItems = [
     LocaleKeys.menu_about.tr,
     LocaleKeys.menu_skills.tr,
     LocaleKeys.menu_repositories.tr,
     LocaleKeys.menu_experiences.tr
   ];
-  var selectedItemIndex = -1;
   final List<BuildContext> contexts = [
     SectionKeys.about.currentContext!,
     SectionKeys.skills.currentContext!,
     SectionKeys.repo.currentContext!,
-    // SectionKeys.xp.currentContext!,
+    SectionKeys.xp.currentContext!,
   ];
 
   @override
@@ -73,17 +74,17 @@ class _CustomAppBarState extends State<CustomAppBar> {
               children: List.generate(
                 navItems.length,
                 (index) => Container(
-                  child: MenuItem(
-                    onPress: () {
-                      setState(() {
-                        selectedItemIndex = index;
-                      });
-                      scrollToSpecificContext(
-                        contexts[index],
-                      );
-                    },
-                    isActive: selectedItemIndex == index,
-                    text: navItems[index],
+                  child: Obx(
+                    () => MenuItem(
+                      onPress: () {
+                        controller.setIndexSectionSelected(index);
+                        scrollToSpecificContext(
+                          contexts[index],
+                        );
+                      },
+                      isActive: index == controller.indexSectionSelected.value,
+                      text: navItems[index],
+                    ),
                   ),
                 ),
               ),

@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   final isInitialLoading = true.obs;
+  final indexSectionSelected = (-1).obs;
+
   @override
   void onInit() {
     super.onInit();
@@ -25,5 +27,9 @@ class HomeController extends GetxController {
         isInitialLoading.value = false;
       },
     );
+  }
+
+  void setIndexSectionSelected(int indexSection) {
+    indexSectionSelected.value = indexSection;
   }
 }
