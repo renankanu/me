@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:me/app/core/core.dart';
 import 'package:me/app/sections/about/about_section.dart';
+import 'package:me/app/sections/experience/experience_section.dart';
 import 'package:me/app/sections/intro/intro_section.dart';
 import 'package:me/app/sections/repo/repo_section.dart';
 import 'package:me/app/sections/skills/skills_section.dart';
@@ -41,7 +42,7 @@ class HomeView extends GetView<HomeController> {
                           AboutSection(key: SectionKeys.about),
                           SkillsSection(key: SectionKeys.skills),
                           RepoSection(key: SectionKeys.repo),
-                          Container(key: SectionKeys.xp),
+                          ExperienceSection(key: SectionKeys.xp),
                         ],
                       ),
                     ),

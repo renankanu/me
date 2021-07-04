@@ -38,7 +38,7 @@ class _MenuItemState extends State<MenuItem> {
       },
       onTap: widget.onPress,
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
+        duration: Duration(milliseconds: 800),
         margin: EdgeInsets.symmetric(horizontal: 15),
         padding: EdgeInsets.symmetric(vertical: 5),
         decoration: BoxDecoration(
