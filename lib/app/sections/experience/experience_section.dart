@@ -22,11 +22,27 @@ class ExperienceSection extends StatelessWidget {
       },
       child: BaseSectionContainer(
         background: Get.theme.hintColor,
-        child: Column(
+        child: Stack(
           children: [
-            ContainerExperience(),
-            ContainerExperience(),
-            ContainerExperience(),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ContainerExperience(),
+                ContainerExperience(),
+                ContainerExperience(),
+              ],
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 5),
+                child: Container(
+                  width: 1,
+                  height: 400,
+                  color: Get.theme.accentColor,
+                ),
+              ),
+            )
           ],
         ),
       ),

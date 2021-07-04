@@ -9,21 +9,11 @@ class ContainerExperience extends StatelessWidget {
     return Row(
       children: [
         Container(
-          child: Stack(
-            children: [
-              Container(
-                width: 10,
-                height: 10,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10 / 2),
-                  color: Get.theme.accentColor,
-                ),
-              ),
-              Container(
-                width: 1,
-                color: Colors.amber,
-              )
-            ],
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10 / 2),
+            color: Get.theme.accentColor,
           ),
         ),
         Container(
