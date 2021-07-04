@@ -23,11 +23,10 @@ class ExperienceSection extends StatelessWidget {
       child: BaseSectionContainer(
         background: Get.theme.hintColor,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // ContainerExperience(),
-            // ContainerExperience(),
-            // ContainerExperience(),
+            ContainerExperience(),
+            ContainerExperience(),
+            ContainerExperience(),
           ],
         ),
       ),
