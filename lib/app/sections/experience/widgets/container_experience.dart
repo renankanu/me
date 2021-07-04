@@ -7,7 +7,6 @@ class ContainerExperience extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 0,
       child: Row(
         // crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

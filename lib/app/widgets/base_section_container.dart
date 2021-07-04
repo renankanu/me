@@ -39,10 +39,7 @@ class BaseSectionContainer extends StatelessWidget {
               child: Container(
                 width: 960,
                 constraints: BoxConstraints(minHeight: height - heightAppBar),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 60),
-                  child: child,
-                ),
+                child: child,
               ),
             ),
           ],
