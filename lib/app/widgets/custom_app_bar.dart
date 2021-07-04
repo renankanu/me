@@ -111,7 +111,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
   void scrollToSpecificContext(BuildContext context) {
     Scrollable.ensureVisible(
       context,
-      duration: Duration(milliseconds: 2500),
+      duration: Duration(milliseconds: 500),
       curve: Curves.fastOutSlowIn,
     );
   }
