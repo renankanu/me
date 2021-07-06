@@ -27,6 +27,16 @@ class LocaleKeys {
   static const repoSection_loadRepo = 'repoSection_loadRepo';
   static const repoSection_totalCommits = 'repoSection_totalCommits';
   static const repoSection_totalRepo = 'repoSection_totalRepo';
+  static const experienceSection_megaTitle = 'experienceSection_megaTitle';
+  static const experienceSection_megaDate = 'experienceSection_megaDate';
+  static const experienceSection_megaDescription =
+      'experienceSection_megaDescription';
+  static const experienceSection_sisterraTitle =
+      'experienceSection_sisterraTitle';
+  static const experienceSection_sisterraDate =
+      'experienceSection_sisterraDate';
+  static const experienceSection_sisterraDescription =
+      'experienceSection_sisterraDescription';
 }
 
 class Locales {
@@ -55,5 +65,13 @@ class Locales {
     'repoSection_loadRepo': 'Carregando Repositórios',
     'repoSection_totalCommits': 'Total de commits: ',
     'repoSection_totalRepo': 'Total de repositórios: ',
+    'experienceSection_megaTitle': 'Megaleios',
+    'experienceSection_megaDate': 'Atual',
+    'experienceSection_megaDescription':
+        '- Desenvolvimento com Flutter; \n- Modular(gerência de dependências, rotas); \n- Bloc, RxDart; \n- Integração com Firebase; \n- Integração com OneSignal; \n- Publicar App nas lojas(Apple e GooglePlay); \n- CD com Bitrise; \n- Integração com APIs REST; \n- Visionamento de código com git; \n- Desenvolvimento com React Native;',
+    'experienceSection_sisterraTitle': 'Sisterra',
+    'experienceSection_sisterraDate': '2015 - 2019',
+    'experienceSection_sisterraDescription':
+        '- Desenvolvimento de aplicativos para Android nativo (Java e Kotlin); \n- Desenvolvimento de aplicações em PHP utilizando DDD para back-end; \n- APIs REST; \n- CQRS pattern; \n- Conhecimento em Docker; \n- Publicar App nas lojas(Apple e GooglePlay); \n- Conhecimento em AWS (Lambda, SNS, SQS, SES, EC2, RDS, S3); \n- Integração com APIs REST; \n- Usuário Linux (GNU / Linux Ubuntu);',
   };
 }

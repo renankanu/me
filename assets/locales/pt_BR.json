@@ -21,8 +21,11 @@
         "totalRepo": "Total de repositórios: "
     },
     "experienceSection": {
-        "megaTitle": "megaleios",
+        "megaTitle": "Megaleios",
         "megaDate": "Atual",
-        "megaDescription": "- Desenvolvimento com Flutter; \n -"
+        "megaDescription": "- Desenvolvimento com Flutter; \n- Modular(gerência de dependências, rotas); \n- Bloc, RxDart; \n- Integração com Firebase; \n- Integração com OneSignal; \n- Publicar App nas lojas(Apple e GooglePlay); \n- CD com Bitrise; \n- Integração com APIs REST; \n- Visionamento de código com git; \n- Desenvolvimento com React Native;",
+        "sisterraTitle": "Sisterra",
+        "sisterraDate": "2015 - 2019",
+        "sisterraDescription": "- Desenvolvimento de aplicativos para Android nativo (Java e Kotlin); \n- Desenvolvimento de aplicações em PHP utilizando DDD para back-end; \n- APIs REST; \n- CQRS pattern; \n- Conhecimento em Docker; \n- Publicar App nas lojas(Apple e GooglePlay); \n- Conhecimento em AWS (Lambda, SNS, SQS, SES, EC2, RDS, S3); \n- Integração com APIs REST; \n- Usuário Linux (GNU / Linux Ubuntu);"
     }
 }

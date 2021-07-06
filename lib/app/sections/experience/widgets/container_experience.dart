@@ -18,6 +18,7 @@ class ContainerExperience extends StatelessWidget {
     return IntrinsicHeight(
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Stack(
             children: [
@@ -40,40 +41,46 @@ class ContainerExperience extends StatelessWidget {
               ),
             ],
           ),
-          Flexible(
-            child: Row(
-              children: [
-                Container(
-                  width: 10,
-                  height: 1,
-                  color: Get.theme.accentColor,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
-                  child: Container(
-                    width: 600,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4),
-                      border: Border.all(
-                        color: Get.theme.accentColor,
-                      ),
+          Row(
+            children: [
+              Container(
+                width: 10,
+                height: 1,
+                color: Get.theme.accentColor,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                child: Container(
+                  width: 600,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    border: Border.all(
+                      color: Get.theme.accentColor,
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(title),
-                          Text(date),
-                          Text(
-                              'escriptionksdpoaksdoaksopakdaposkdaoskdaok oaksdo kaop dkaopsdk aosdka oskdaposdk aopsdkaosd kaposdkapos dkaos dkaopsd kaopdskaopdkao pdkaodpsak'),
-                        ],
-                      ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title,
+                          style: Get.textTheme.subtitle2!
+                              .copyWith(fontSize: 18, letterSpacing: 2),
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          date,
+                          style: TextStyle(fontSize: 16),
+                        ),
+                        SizedBox(height: 4),
+                        Text(description),
+                      ],
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),

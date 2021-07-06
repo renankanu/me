@@ -40,7 +40,7 @@ class _ScaleAnimationTitleSectionState extends State<ScaleAnimationTitleSection>
   @override
   void dispose() {
     super.dispose();
-    _controller.dispose();
+    // _controller.dispose();
   }
 
   @override
@@ -50,10 +50,10 @@ class _ScaleAnimationTitleSectionState extends State<ScaleAnimationTitleSection>
       onVisibilityChanged: (visibilityInfo) {
         var visiblePercentage = visibilityInfo.visibleFraction * 100;
         if (visiblePercentage >= 75) {
-          _controller.forward();
+          _controller.forward().orCancel;
         }
         if (visiblePercentage < 50) {
-          _controller.reverse();
+          _controller.reverse().orCancel;
         }
       },
       child: ScaleTransition(
