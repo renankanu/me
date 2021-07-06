@@ -19,5 +19,10 @@
         "loadRepo": "Carregando Repositórios",
         "totalCommits": "Total de commits: ",
         "totalRepo": "Total de repositórios: "
+    },
+    "experienceSection": {
+        "megaTitle": "megaleios",
+        "megaDate": "Atual",
+        "megaDescription": "- Desenvolvimento com Flutter; \n -"
     }
 }

@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ContainerExperience extends StatelessWidget {
-  const ContainerExperience({Key? key}) : super(key: key);
+  const ContainerExperience({
+    Key? key,
+    required this.title,
+    required this.date,
+    required this.description,
+  }) : super(key: key);
+
+  final String title;
+  final String date;
+  final String description;
 
   @override
   Widget build(BuildContext context) {
@@ -39,27 +48,26 @@ class ContainerExperience extends StatelessWidget {
                   height: 1,
                   color: Get.theme.accentColor,
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4),
-                        border: Border.all(
-                          color: Get.theme.accentColor,
-                        ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: Container(
+                    width: 600,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      border: Border.all(
+                        color: Get.theme.accentColor,
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Megaleios'),
-                            Text('2016 - 2017'),
-                            Text(
-                                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eveniet incidunt quidem illum repellat, a nemo cumque optio asperiores tempora delectus cupiditate'),
-                          ],
-                        ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(title),
+                          Text(date),
+                          Text(
+                              'escriptionksdpoaksdoaksopakdaposkdaoskdaok oaksdo kaop dkaopsdk aosdka oskdaposdk aopsdkaosd kaposdkapos dkaos dkaopsd kaopdskaopdkao pdkaodpsak'),
+                        ],
                       ),
                     ),
                   ),

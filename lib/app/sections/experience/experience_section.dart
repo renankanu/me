@@ -27,9 +27,11 @@ class ExperienceSection extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              ContainerExperience(),
-              ContainerExperience(),
-              ContainerExperience(),
+              ContainerExperience(
+                title: 'Megaleios',
+                date: 'Atual',
+                description: 'Claudia e Renan 🥰',
+              ),
             ],
           ),
         ),
