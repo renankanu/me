@@ -54,14 +54,14 @@ class _CustomAppBarState extends State<CustomAppBar> {
                   text: 'R',
                   style: Get.textTheme.headline1?.copyWith(
                     fontWeight: FontWeight.w900,
-                    color: CustomizedColors.white,
+                    color: Get.theme.cardColor,
                     fontSize: 26,
                   ),
                   children: <TextSpan>[
                     TextSpan(
                       text: 'K',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Get.theme.cardColor,
                         fontWeight: FontWeight.w400,
                         fontSize: 26,
                       ),
