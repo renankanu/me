@@ -11,7 +11,7 @@ class Themes {
     scaffoldBackgroundColor: CustomizedColors.white,
     hintColor: CustomizedColors.alto,
     shadowColor: CustomizedColors.black.withOpacity(0.5),
-    dividerColor: CustomizedColors.alto.withOpacity(0.5),
+    dividerColor: CustomizedColors.black.withOpacity(0.5),
     cardColor: CustomizedColors.ebonyClay,
     disabledColor: CustomizedColors.ebonyClay,
     textTheme: GoogleFonts.rubikTextTheme().copyWith(
