@@ -8,6 +8,7 @@ import 'package:me/app/sections/intro/intro_section.dart';
 import 'package:me/app/sections/repo/repo_section.dart';
 import 'package:me/app/sections/skills/skills_section.dart';
 import 'package:me/app/widgets/custom_app_bar.dart';
+import 'package:me/app/widgets/footer.dart';
 
 import 'home_controller.dart';
 import 'widgets/initial_loading.dart';
@@ -43,6 +44,7 @@ class HomeView extends GetView<HomeController> {
                           SkillsSection(key: SectionKeys.skills),
                           RepoSection(key: SectionKeys.repo),
                           ExperienceSection(key: SectionKeys.xp),
+                          Footer(),
                         ],
                       ),
                     ),
