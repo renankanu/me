@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'package:loading_animations/loading_animations.dart';
 import 'package:me/app/core/graphql_query.dart';
 import 'package:me/app/modules/home/home_controller.dart';
 import 'package:me/app/widgets/base_section_container.dart';
@@ -37,18 +38,16 @@ class RepoSection extends StatelessWidget {
                 builder: (QueryResult result,
                     {VoidCallback? refetch, FetchMore? fetchMore}) {
                   if (result.hasException) {
-                    return Text(result.exception.toString());
+                    return Text(LocaleKeys.repoSection_oppsError.tr);
                   }
                   if (result.isLoading) {
                     return Center(
                       child: Padding(
                         padding: const EdgeInsets.only(top: 60),
-                        child: Text(
-                          LocaleKeys.repoSection_loadRepo.tr,
-                          style: TextStyle(
-                            fontSize: 22,
-                            color: Get.theme.buttonColor,
-                          ),
+                        child: LoadingBouncingGrid.square(
+                          size: 40,
+                          backgroundColor: Get.theme.cardColor,
+                          duration: Duration(seconds: 1),
                         ),
                       ),
                     );

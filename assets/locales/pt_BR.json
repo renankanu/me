@@ -18,7 +18,8 @@
         "myRepo": "Meus Repositórios",
         "loadRepo": "Carregando Repositórios",
         "totalCommits": "Total de commits: ",
-        "totalRepo": "Total de repositórios: "
+        "totalRepo": "Total de repositórios: ",
+        "oppsError": "Oppss! Aconteceu algo inesperado. 😕"
     },
     "experienceSection": {
         "megaTitle": "Megaleios",

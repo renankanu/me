@@ -13,6 +13,7 @@ class TitleSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScaleAnimationTitleSection(
       child: Container(
+        margin: EdgeInsets.only(top: 60),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

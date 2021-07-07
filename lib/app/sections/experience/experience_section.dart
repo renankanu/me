@@ -24,6 +24,7 @@ class ExperienceSection extends StatelessWidget {
       },
       child: BaseSectionContainer(
         background: Get.theme.hintColor,
+        hasImageBackground: true,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(

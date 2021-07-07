@@ -12,4 +12,5 @@ abstract class CustomizedImages {
   static const String icAws = 'assets/images/ic_aws.png';
   static const String bg = 'assets/images/3703.png';
   static const String notFound = 'assets/images/not_found.jpg';
+  static const String xpBg = 'assets/images/xp_bg.png';
 }

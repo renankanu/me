@@ -27,6 +27,7 @@ class LocaleKeys {
   static const repoSection_loadRepo = 'repoSection_loadRepo';
   static const repoSection_totalCommits = 'repoSection_totalCommits';
   static const repoSection_totalRepo = 'repoSection_totalRepo';
+  static const repoSection_oppsError = 'repoSection_oppsError';
   static const experienceSection_megaTitle = 'experienceSection_megaTitle';
   static const experienceSection_megaDate = 'experienceSection_megaDate';
   static const experienceSection_megaDescription =
@@ -65,6 +66,7 @@ class Locales {
     'repoSection_loadRepo': 'Carregando Repositórios',
     'repoSection_totalCommits': 'Total de commits: ',
     'repoSection_totalRepo': 'Total de repositórios: ',
+    'repoSection_oppsError': 'Oppss! Aconteceu algo inesperado. 😕',
     'experienceSection_megaTitle': 'Megaleios',
     'experienceSection_megaDate': 'Atual',
     'experienceSection_megaDescription':

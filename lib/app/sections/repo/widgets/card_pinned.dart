@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:me/app/core/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -59,24 +60,46 @@ class CardPinned extends StatelessWidget {
                 ),
                 SizedBox(height: 18),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      width: 14,
-                      height: 14,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20),
+                    Row(
+                      children: [
+                        Container(
+                          width: 14,
+                          height: 14,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(20),
+                              ),
+                              color:
+                                  HexColor(repo['primaryLanguage']['color'])),
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          repo['primaryLanguage']['name'],
+                          style: TextStyle(
+                            color: CustomizedColors.white.withOpacity(0.8),
+                            fontSize: 11,
                           ),
-                          color: HexColor(repo['primaryLanguage']['color'])),
+                        ),
+                      ],
                     ),
-                    SizedBox(width: 8),
-                    Text(
-                      repo['primaryLanguage']['name'],
-                      style: TextStyle(
-                        color: CustomizedColors.white.withOpacity(0.8),
-                        fontSize: 11,
-                      ),
-                    ),
+                    Row(
+                      children: [
+                        FaIcon(
+                          FontAwesomeIcons.syncAlt,
+                          size: 12,
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          repo['updatedAt'],
+                          style: TextStyle(
+                            color: CustomizedColors.white.withOpacity(0.8),
+                            fontSize: 11,
+                          ),
+                        ),
+                      ],
+                    )
                   ],
                 )
               ],
