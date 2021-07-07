@@ -1,11 +1,11 @@
 {
-    "name": "me",
-    "short_name": "me",
+    "name": "RenanKanu;",
+    "short_name": "RenanKanu;",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Portifolio make with Flutter, created by RenanKanu",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
