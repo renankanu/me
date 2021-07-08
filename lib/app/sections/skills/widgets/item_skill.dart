@@ -70,8 +70,7 @@ class _ItemSkillState extends State<ItemSkill>
                 ? [
                     BoxShadow(
                       color: Get.theme.dividerColor,
-                      offset: Offset(0, 1),
-                      blurRadius: 3,
+                      offset: Offset(-1, 1),
                     ),
                   ]
                 : null,

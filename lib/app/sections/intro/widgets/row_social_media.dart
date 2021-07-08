@@ -2,35 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/route_manager.dart';
 
-class RowSocialMedia extends StatelessWidget {
+class RowSocialMedia extends StatefulWidget {
   const RowSocialMedia({Key? key}) : super(key: key);
+
+  @override
+  _RowSocialMediaState createState() => _RowSocialMediaState();
+}
+
+class _RowSocialMediaState extends State<RowSocialMedia> {
+  bool _isHover = false;
+  final List<IconData> list = [
+    FontAwesomeIcons.twitter,
+    FontAwesomeIcons.linkedinIn,
+    FontAwesomeIcons.github,
+    FontAwesomeIcons.mediumM,
+    FontAwesomeIcons.spotify
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Column(
         children: [
-          SocialMediaButton(
-            onPressSocialMedia: () {},
-            icon: FontAwesomeIcons.twitter,
-          ),
-          SocialMediaButton(
-            onPressSocialMedia: () {},
-            icon: FontAwesomeIcons.linkedinIn,
-          ),
-          SocialMediaButton(
-            onPressSocialMedia: () {},
-            icon: FontAwesomeIcons.github,
-          ),
-          SocialMediaButton(
-            onPressSocialMedia: () {},
-            icon: FontAwesomeIcons.mediumM,
-          ),
-          SocialMediaButton(
-            onPressSocialMedia: () {},
-            icon: FontAwesomeIcons.spotify,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: list
+                .map(
+                  (icon) => SocialMediaButton(
+                    onPressSocialMedia: () {},
+                    icon: icon,
+                  ),
+                )
+                .toList(),
           ),
         ],
       ),
@@ -38,7 +42,7 @@ class RowSocialMedia extends StatelessWidget {
   }
 }
 
-class SocialMediaButton extends StatelessWidget {
+class SocialMediaButton extends StatefulWidget {
   const SocialMediaButton({
     Key? key,
     required this.icon,
@@ -49,16 +53,29 @@ class SocialMediaButton extends StatelessWidget {
   final Function() onPressSocialMedia;
 
   @override
+  _SocialMediaButtonState createState() => _SocialMediaButtonState();
+}
+
+class _SocialMediaButtonState extends State<SocialMediaButton> {
+  bool _isHover = false;
+
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: InkWell(
+        onHover: (value) {
+          setState(() {
+            _isHover = value;
+          });
+        },
         borderRadius: BorderRadius.circular(42 / 2),
-        onTap: onPressSocialMedia,
+        onTap: widget.onPressSocialMedia,
         child: Container(
           height: 42,
           width: 42,
           decoration: BoxDecoration(
+            color: _isHover ? Get.theme.accentColor.withOpacity(0.2) : null,
             borderRadius: BorderRadius.circular(60),
             border: Border.all(
               width: 2,
@@ -67,7 +84,7 @@ class SocialMediaButton extends StatelessWidget {
           ),
           child: Center(
             child: FaIcon(
-              icon,
+              widget.icon,
               color: Get.theme.accentColor,
             ),
           ),

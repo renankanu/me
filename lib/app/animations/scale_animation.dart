@@ -52,9 +52,6 @@ class _ScaleAnimationTitleSectionState extends State<ScaleAnimationTitleSection>
         if (visiblePercentage >= 75) {
           _controller.forward().orCancel;
         }
-        if (visiblePercentage < 50) {
-          _controller.reverse().orCancel;
-        }
       },
       child: ScaleTransition(
         scale: _animation,

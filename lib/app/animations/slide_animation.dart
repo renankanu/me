@@ -39,8 +39,8 @@ class _SlideAnimationState extends State<SlideAnimation>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -51,9 +51,6 @@ class _SlideAnimationState extends State<SlideAnimation>
         var visiblePercentage = visibilityInfo.visibleFraction * 100;
         if (visiblePercentage == 100) {
           _controller.forward();
-        }
-        if (visiblePercentage < 50) {
-          _controller.reverse();
         }
       },
       child: SlideTransition(
