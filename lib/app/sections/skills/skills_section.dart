@@ -33,9 +33,9 @@ class SkillsSection extends StatelessWidget {
               SizedBox(height: 32),
               Text(LocaleKeys.skillsSection_thingsIDo.tr),
               Container(
-                height: 1,
+                height: 2,
                 color: Get.theme.accentColor,
-                width: 100,
+                width: 120,
               ),
               SizedBox(height: 16),
               Center(

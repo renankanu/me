@@ -10,13 +10,12 @@ class RowSocialMedia extends StatefulWidget {
 }
 
 class _RowSocialMediaState extends State<RowSocialMedia> {
-  bool _isHover = false;
   final List<IconData> list = [
-    FontAwesomeIcons.twitter,
     FontAwesomeIcons.linkedinIn,
     FontAwesomeIcons.github,
     FontAwesomeIcons.mediumM,
-    FontAwesomeIcons.spotify
+    FontAwesomeIcons.spotify,
+    FontAwesomeIcons.twitter,
   ];
 
   @override

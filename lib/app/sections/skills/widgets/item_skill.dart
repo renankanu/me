@@ -65,13 +65,16 @@ class _ItemSkillState extends State<ItemSkill>
           decoration: BoxDecoration(
             color: Get.theme.hintColor,
             borderRadius: BorderRadius.circular(6),
-            border: Border.all(color: Get.theme.dividerColor),
+            border: Border.all(
+              color: Get.theme.dividerColor,
+              width: 2,
+            ),
             boxShadow: _isHover
                 ? [
                     BoxShadow(
-                      color: Get.theme.dividerColor,
-                      offset: Offset(-1, 1),
-                    ),
+                        color: Get.theme.dividerColor,
+                        offset: Offset(-2, 2),
+                        blurRadius: 4),
                   ]
                 : null,
           ),

@@ -24,18 +24,18 @@ class ContainerExperience extends StatelessWidget {
             children: [
               Center(
                 child: Container(
-                  width: 10,
-                  height: 10,
+                  width: 14,
+                  height: 14,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10 / 2),
+                    borderRadius: BorderRadius.circular(14 / 2),
                     color: Get.theme.accentColor,
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 5),
+                padding: const EdgeInsets.only(left: 7),
                 child: Container(
-                  width: 1,
+                  width: 2,
                   color: Get.theme.accentColor,
                 ),
               ),
@@ -45,7 +45,7 @@ class ContainerExperience extends StatelessWidget {
             children: [
               Container(
                 width: 10,
-                height: 1,
+                height: 2,
                 color: Get.theme.accentColor,
               ),
               Padding(
@@ -55,6 +55,7 @@ class ContainerExperience extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(4),
                     border: Border.all(
+                      width: 2,
                       color: Get.theme.accentColor,
                     ),
                   ),

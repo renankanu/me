@@ -60,9 +60,9 @@ class RepoSection extends StatelessWidget {
                       children: [
                         Text(LocaleKeys.repoSection_favoriteRepo.tr),
                         Container(
-                          height: 1,
+                          height: 2,
                           color: Get.theme.accentColor,
-                          width: 100,
+                          width: 120,
                         ),
                         SizedBox(height: 16),
                         Wrap(
