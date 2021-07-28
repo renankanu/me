@@ -19,7 +19,6 @@ class _ItemSkillState extends State<ItemSkill>
     with TickerProviderStateMixin<ItemSkill> {
   late final AnimationController _controller;
   late final Animation<double> _animation;
-  bool _isHover = false;
 
   @override
   void initState() {
@@ -46,37 +45,25 @@ class _ItemSkillState extends State<ItemSkill>
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       onEnter: (event) {
-        setState(() {
-          _isHover = true;
-        });
+        setState(() {});
         _controller.forward();
       },
       onExit: (event) {
-        setState(() {
-          _isHover = false;
-        });
+        setState(() {});
         _controller.reverse();
       },
       child: ScaleTransition(
         scale: Tween(begin: 0.96, end: 1.0).animate(_animation),
         child: Container(
-          width: 240,
-          height: 240,
+          width: 200,
+          height: 200,
           decoration: BoxDecoration(
             color: Get.theme.hintColor,
             borderRadius: BorderRadius.circular(6),
             border: Border.all(
               color: Get.theme.dividerColor,
-              width: 2,
+              width: 1,
             ),
-            boxShadow: _isHover
-                ? [
-                    BoxShadow(
-                        color: Get.theme.dividerColor,
-                        offset: Offset(-2, 2),
-                        blurRadius: 4),
-                  ]
-                : null,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -87,10 +74,10 @@ class _ItemSkillState extends State<ItemSkill>
                 visible: widget.icon != '',
                 child: Image.asset(
                   widget.icon,
-                  height: 120,
+                  height: 100,
                 ),
                 replacement: FlutterLogo(
-                  size: 120,
+                  size: 100,
                 ),
               )
             ],

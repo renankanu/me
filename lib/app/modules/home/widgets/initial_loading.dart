@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loading_animations/loading_animations.dart';
-import 'package:me/app/core/core.dart';
 
 class InitialLoading extends StatelessWidget {
   const InitialLoading({
