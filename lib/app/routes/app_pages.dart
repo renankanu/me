@@ -18,6 +18,9 @@ class AppPages {
       page: () => HomeView(),
       binding: HomeBinding(),
     ),
-    GetPage(name: _Paths.HOME, page: () => NotFoundView())
+    GetPage(
+      name: _Paths.HOME,
+      page: () => NotFoundView(),
+    )
   ];
 }

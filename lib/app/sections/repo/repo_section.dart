@@ -47,12 +47,12 @@ class RepoSection extends StatelessWidget {
                         child: LoadingBouncingGrid.square(
                           size: 40,
                           backgroundColor: Get.theme.cardColor,
-                          duration: Duration(seconds: 1),
+                          duration: const Duration(seconds: 1),
                         ),
                       ),
                     );
                   }
-                  List repositoriesPinned =
+                  final dynamic repositoriesPinned =
                       result.data!['viewer']['pinnedItems']['nodes'];
                   return Padding(
                     padding: const EdgeInsets.only(top: 60),
@@ -64,13 +64,13 @@ class RepoSection extends StatelessWidget {
                           color: Get.theme.accentColor,
                           width: 120,
                         ),
-                        SizedBox(height: 16),
+                        const SizedBox(height: 16),
                         Wrap(
                           runSpacing: 20,
                           spacing: 20,
                           children: repositoriesPinned.map(
                             (repo) {
-                              var index = repositoriesPinned.indexOf(repo);
+                              final index = repositoriesPinned.indexOf(repo);
                               return CardPinned(
                                 repo: repositoriesPinned[index],
                               );

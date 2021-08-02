@@ -18,12 +18,14 @@ class _FooterState extends State<Footer> with SingleTickerProviderStateMixin {
     vsync: this,
   )..repeat(reverse: true);
   late final Animation<Offset> _offsetAnimation = Tween<Offset>(
-    begin: Offset.zero,
-    end: const Offset(0.0, -0.5),
-  ).animate(CurvedAnimation(
-    parent: _controller,
-    curve: Curves.elasticIn,
-  ));
+    begin: const Offset(0.0, 0.15),
+    end: const Offset(0.0, -0.3),
+  ).animate(
+    CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeIn,
+    ),
+  );
 
   @override
   void dispose() {
@@ -34,45 +36,38 @@ class _FooterState extends State<Footer> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 80,
       color: Get.theme.primaryColor,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Stack(
           children: [
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 8),
-                  child: Text(
-                    '${DateTime.now().year}',
-                    style: TextStyle(color: Get.theme.accentColor),
-                  ),
-                ),
-                SizedBox(height: 16),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8),
-                  child: Text(
-                    'aaaaa',
-                    style: TextStyle(color: Get.theme.accentColor),
-                  ),
-                ),
-              ],
-            ),
-            SlideTransition(
-              position: _offsetAnimation,
+            Center(
               child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Container(
-                  width: 46,
-                  height: 46,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(46 / 2),
-                    color: Get.theme.hintColor,
-                  ),
-                  child: Center(
-                    child: FaIcon(
-                      FontAwesomeIcons.chevronUp,
+                padding: const EdgeInsets.only(left: 8),
+                child: Text(
+                  '© ${DateTime.now().year} RenanKanu',
+                  style: TextStyle(color: Get.theme.accentColor),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.centerRight,
+              child: SlideTransition(
+                position: _offsetAnimation,
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(46 / 2),
+                      color: Get.theme.hintColor,
+                    ),
+                    child: Center(
+                      child: FaIcon(
+                        FontAwesomeIcons.chevronUp,
+                      ),
                     ),
                   ),
                 ),

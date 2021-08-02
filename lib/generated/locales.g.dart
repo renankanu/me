@@ -56,7 +56,7 @@ class Locales {
     'menu_skills': 'Skills',
     'menu_repositories': 'Repositórios',
     'menu_experiences': 'Experiências',
-    'aboutSection_tagMobileDeveloper': 'Desenvolvedor Mobile.',
+    'aboutSection_tagMobileDeveloper': 'Desenvolvedor Mobile. 📱',
     'aboutSection_aboutMeDescOne': 'Olá, meu nome é Renan.',
     'aboutSection_aboutMeDescTwo':
         'Sou desenvolvedor flutter, trabalho na Megaleios. Gosto de trabalhar em equipe, você aprenderá mais rápido e muito mais. Como diz o ditado: \'duas cabeças pensam melhor do que uma\'. Gosto de todos os assuntos que envolvem tecnologia, sou jogador de rugby, gosto de jogos eletrónicos, praticante de musculação. E adoro um café ☕',

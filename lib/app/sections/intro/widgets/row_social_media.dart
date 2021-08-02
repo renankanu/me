@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/route_manager.dart';
+import 'package:me/app/model/social_media.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class RowSocialMedia extends StatefulWidget {
   const RowSocialMedia({Key? key}) : super(key: key);
@@ -10,13 +12,34 @@ class RowSocialMedia extends StatefulWidget {
 }
 
 class _RowSocialMediaState extends State<RowSocialMedia> {
-  final List<IconData> list = [
-    FontAwesomeIcons.linkedinIn,
-    FontAwesomeIcons.github,
-    FontAwesomeIcons.mediumM,
-    FontAwesomeIcons.spotify,
-    FontAwesomeIcons.twitter,
+  final List<SocialMedia> list = [
+    SocialMedia(
+        icon: FontAwesomeIcons.linkedinIn,
+        url: 'https://www.linkedin.com/in/renansantosbr/'),
+    SocialMedia(
+        icon: FontAwesomeIcons.github, url: 'https://github.com/renankanu'),
+    SocialMedia(
+        icon: FontAwesomeIcons.mediumM, url: 'https://medium.com/@renankanu'),
+    SocialMedia(
+        icon: FontAwesomeIcons.spotify,
+        url:
+            'https://open.spotify.com/user/renankanu?si=8B55A_C1RRCYOUcv56O1-g&utm_source=copy-link&dl_branch=1&nd=1'),
+    SocialMedia(
+        icon: FontAwesomeIcons.twitter,
+        url: 'https://twitter.com/RenanSa38311125?s=08'),
   ];
+
+  Future<void> _launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +51,11 @@ class _RowSocialMediaState extends State<RowSocialMedia> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: list
                 .map(
-                  (icon) => SocialMediaButton(
-                    onPressSocialMedia: () {},
-                    icon: icon,
+                  (socialMedia) => SocialMediaButton(
+                    onPressSocialMedia: () {
+                      _launchInBrowser(socialMedia.url);
+                    },
+                    icon: socialMedia.icon,
                   ),
                 )
                 .toList(),
