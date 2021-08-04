@@ -30,6 +30,10 @@ class DetailSkillView extends GetView<DetailSkillController> {
               ),
               SizedBox(height: 32),
               Container(
+                constraints: BoxConstraints(
+                  maxWidth: 800,
+                  minWidth: 500,
+                ),
                 padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
