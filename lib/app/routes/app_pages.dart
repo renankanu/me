@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
-
-import 'package:me/app/modules/detail_skill/bindings/detail_skill_binding.dart';
-import 'package:me/app/modules/detail_skill/views/detail_skill_view.dart';
+import 'package:me/app/modules/detail_skill/detail_skill_binding.dart';
+import 'package:me/app/modules/detail_skill/detail_skill_view.dart';
 import 'package:me/app/modules/home/home_binding.dart';
 import 'package:me/app/modules/home/home_view.dart';
 import 'package:me/app/modules/not_found/not_found_view.dart';

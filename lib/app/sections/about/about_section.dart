@@ -7,7 +7,7 @@ import 'package:me/app/widgets/title_section.dart';
 import 'package:me/generated/locales.g.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-import 'widgets/avatar_images.dart';
+import '../../widgets/avatar_images.dart';
 
 class AboutSection extends StatelessWidget {
   AboutSection({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:me/app/core/widgets/logo_skill.dart';
 
-import '../controllers/detail_skill_controller.dart';
+import 'detail_skill_controller.dart';
 
 class DetailSkillView extends GetView<DetailSkillController> {
   @override

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:me/app/core/core.dart';
 
 class MenuItem extends StatefulWidget {
   final VoidCallback onPress;
@@ -39,8 +40,10 @@ class _MenuItemState extends State<MenuItem> {
       onTap: widget.onPress,
       child: AnimatedContainer(
         duration: Duration(milliseconds: 800),
-        margin: EdgeInsets.symmetric(horizontal: 15),
-        padding: EdgeInsets.symmetric(vertical: 5),
+        margin: EdgeInsets.symmetric(
+            horizontal: CustomizedResponsive.isSmallScreen(context) ? 5 : 15),
+        padding: EdgeInsets.symmetric(
+            vertical: CustomizedResponsive.isSmallScreen(context) ? 15 : 5),
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
