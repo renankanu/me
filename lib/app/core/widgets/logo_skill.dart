@@ -4,9 +4,11 @@ class LogoSkill extends StatelessWidget {
   const LogoSkill({
     Key? key,
     required this.icon,
+    this.height,
   }) : super(key: key);
 
   final String icon;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +16,10 @@ class LogoSkill extends StatelessWidget {
       visible: icon != '',
       child: Image.asset(
         icon,
-        height: 100,
+        height: height ?? 100,
       ),
       replacement: FlutterLogo(
-        size: 100,
+        size: height ?? 100,
       ),
     );
   }

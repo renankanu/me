@@ -14,12 +14,30 @@ class DetailSkillView extends GetView<DetailSkillController> {
           () => Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                '${controller.currentSkill.name}',
-                style: Get.textTheme.headline3,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    '${controller.currentSkill.name}',
+                    style: Get.textTheme.headline3,
+                  ),
+                  SizedBox(width: 16),
+                  LogoSkill(
+                    icon: controller.currentSkill.icon!,
+                    height: 50,
+                  ),
+                ],
               ),
-              LogoSkill(icon: controller.currentSkill.icon!),
+              SizedBox(height: 32),
               Container(
+                padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border.all(
+                    color: Get.theme.dividerColor,
+                    width: 1,
+                  ),
+                ),
                 child: Text(controller.descriptionSkill),
               )
             ],

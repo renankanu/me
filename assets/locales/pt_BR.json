@@ -14,15 +14,14 @@
         "thingsIDo": "Coisas que eu faço e sei fazer",
         "flutter": "- Compreensão da estrutura Flutter;\n- Modular(gerência de dependências, rotas); \n- Bloc, RxDart, GetX;\n- Integração com Firebase;\n- Integração com OneSignal;\n- Publicação nas lojas(Apple e GooglePlay);\n- CD com Bitrise;\n- Integração com APIs REST;\n- Visionamento de código com git;",
         "rn": "- Conhecimento em ES6;\n- Hooks;\n- Conhecimento em Redux; \n- ESLint;",
-        "js": "",
-        "ts": "",
-        "firebase": "",
-        "appleStore": "",
-        "googlePlay": "",
-        "git": "",
-        "php": "",
-        "docker": "",
-        "aws": ""
+        "js": "- Estruturas JavaScript para Node.js; \n- NPM, Bower, JSPM; \n- EcmaScript 6; \n- TypeScript; \n- React.js;",
+        "firebase": "- Authentication;\n- Realtime Database;\n- Hosting;\n- Crashlytics; \n- App Distribution; \n- Analytics;",
+        "appleStore": "- Publicação na Loja;\n- TestFlight;",
+        "googlePlay": "- Publicação na Loja;",
+        "git": "- Git Command Line; \n- Versionamento com Git;",
+        "php": "- Criação de API Rest;\n -Testes unitário; \n- CQRS;\n - DDD; \n- Symfony;",
+        "docker": "- Rede de contêiner no Docker;\n - Prometheus; \n- Grafana;",
+        "aws": "-Lambda;\n- SNS;\n- SQS;\n- SES;\n- EC2;\n- RDS;\n- S3;"
     },
     "repoSection": {
         "favoriteRepo": "Repositórios favoritos",

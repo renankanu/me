@@ -23,6 +23,15 @@ class LocaleKeys {
   static const aboutSection_aboutMeDescTwo = 'aboutSection_aboutMeDescTwo';
   static const skillsSection_thingsIDo = 'skillsSection_thingsIDo';
   static const skillsSection_flutter = 'skillsSection_flutter';
+  static const skillsSection_rn = 'skillsSection_rn';
+  static const skillsSection_js = 'skillsSection_js';
+  static const skillsSection_firebase = 'skillsSection_firebase';
+  static const skillsSection_appleStore = 'skillsSection_appleStore';
+  static const skillsSection_googlePlay = 'skillsSection_googlePlay';
+  static const skillsSection_git = 'skillsSection_git';
+  static const skillsSection_php = 'skillsSection_php';
+  static const skillsSection_docker = 'skillsSection_docker';
+  static const skillsSection_aws = 'skillsSection_aws';
   static const repoSection_favoriteRepo = 'repoSection_favoriteRepo';
   static const repoSection_myRepo = 'repoSection_myRepo';
   static const repoSection_loadRepo = 'repoSection_loadRepo';
@@ -62,7 +71,23 @@ class Locales {
     'aboutSection_aboutMeDescTwo':
         'Sou desenvolvedor flutter, trabalho na Megaleios. Gosto de trabalhar em equipe, você aprenderá mais rápido e muito mais. Como diz o ditado: \'duas cabeças pensam melhor do que uma\'. Gosto de todos os assuntos que envolvem tecnologia, sou jogador de rugby, gosto de jogos eletrónicos, praticante de musculação. E adoro um café ☕',
     'skillsSection_thingsIDo': 'Coisas que eu faço e sei fazer',
-    'skillsSection_flutter': '- Compreensão da estrutura Flutter',
+    'skillsSection_flutter':
+        '- Compreensão da estrutura Flutter;\n- Modular(gerência de dependências, rotas); \n- Bloc, RxDart, GetX;\n- Integração com Firebase;\n- Integração com OneSignal;\n- Publicação nas lojas(Apple e GooglePlay);\n- CD com Bitrise;\n- Integração com APIs REST;\n- Visionamento de código com git;',
+    'skillsSection_rn':
+        '- Conhecimento em ES6;\n- Hooks;\n- Conhecimento em Redux; \n- ESLint;',
+    'skillsSection_js':
+        '- Estruturas JavaScript para Node.js; \n- NPM, Bower, JSPM; \n- EcmaScript 6; \n- TypeScript; \n- React.js;',
+    'skillsSection_firebase':
+        '- Authentication;\n- Realtime Database;\n- Hosting;\n- Crashlytics; \n- App Distribution; \n- Analytics;',
+    'skillsSection_appleStore': '- Publicação na Loja;\n- TestFlight;',
+    'skillsSection_googlePlay': '- Publicação na Loja;',
+    'skillsSection_git': '- Git Command Line; \n- Versionamento com Git;',
+    'skillsSection_php':
+        '- Criação de API Rest;\n -Testes unitário; \n- CQRS;\n - DDD; \n- Symfony;',
+    'skillsSection_docker':
+        '- Rede de contêiner no Docker;\n - Prometheus; \n- Grafana;',
+    'skillsSection_aws':
+        '-Lambda;\n- SNS;\n- SQS;\n- SES;\n- EC2;\n- RDS;\n- S3;',
     'repoSection_favoriteRepo': 'Repositórios favoritos',
     'repoSection_myRepo': 'Meus Repositórios',
     'repoSection_loadRepo': 'Carregando Repositórios',
@@ -72,7 +97,7 @@ class Locales {
     'experienceSection_megaTitle': 'Megaleios',
     'experienceSection_megaDate': 'Atual',
     'experienceSection_megaDescription':
-        '- Desenvolvimento com Flutter; \n- Modular(gerência de dependências, rotas); \n- Bloc, RxDart; \n- Integração com Firebase; \n- Integração com OneSignal; \n- Publicar App nas lojas(Apple e GooglePlay); \n- CD com Bitrise; \n- Integração com APIs REST; \n- Visionamento de código com git; \n- Desenvolvimento com React Native;',
+        '- Desenvolvimento com Flutter; \n- Modular(gerência de dependências, rotas); \n- Bloc, RxDart, GetX; \n- Integração com Firebase; \n- Integração com OneSignal; \n- Publicar App nas lojas(Apple e GooglePlay); \n- CD com Bitrise; \n- Integração com APIs REST; \n- Visionamento de código com git; \n- Desenvolvimento com React Native;',
     'experienceSection_sisterraTitle': 'Sisterra',
     'experienceSection_sisterraDate': '2015 - 2019',
     'experienceSection_sisterraDescription':
