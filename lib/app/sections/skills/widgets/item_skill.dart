@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
+import 'package:me/app/core/widgets/logo_skill.dart';
+import 'package:me/app/model/skill.dart';
+import 'package:me/app/routes/app_pages.dart';
 
 class ItemSkill extends StatefulWidget {
   const ItemSkill({
     Key? key,
-    required this.label,
-    required this.icon,
+    required this.skill,
   }) : super(key: key);
-  final String label;
-  final String icon;
+  final Skill skill;
 
   @override
   _ItemSkillState createState() => _ItemSkillState();
@@ -23,7 +24,7 @@ class _ItemSkillState extends State<ItemSkill>
   @override
   void initState() {
     _controller = AnimationController(
-      duration: const Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 100),
       vsync: this,
     );
 
@@ -52,35 +53,31 @@ class _ItemSkillState extends State<ItemSkill>
         setState(() {});
         _controller.reverse();
       },
-      child: ScaleTransition(
-        scale: Tween(begin: 0.96, end: 1.0).animate(_animation),
-        child: Container(
-          width: 200,
-          height: 200,
-          decoration: BoxDecoration(
-            color: Get.theme.hintColor,
-            borderRadius: BorderRadius.circular(6),
-            border: Border.all(
-              color: Get.theme.dividerColor,
-              width: 1,
+      child: InkWell(
+        onTap: () {
+          Get.toNamed(Routes.DETAIL_SKILL, arguments: widget.skill);
+        },
+        child: ScaleTransition(
+          scale: Tween(begin: 0.96, end: 1.0).animate(_animation),
+          child: Container(
+            width: 200,
+            height: 200,
+            decoration: BoxDecoration(
+              color: Get.theme.hintColor,
+              borderRadius: BorderRadius.circular(6),
+              border: Border.all(
+                color: Get.theme.dividerColor,
+                width: 1,
+              ),
             ),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(widget.label),
-              SizedBox(height: 24),
-              Visibility(
-                visible: widget.icon != '',
-                child: Image.asset(
-                  widget.icon,
-                  height: 100,
-                ),
-                replacement: FlutterLogo(
-                  size: 100,
-                ),
-              )
-            ],
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(widget.skill.name!),
+                SizedBox(height: 24),
+                LogoSkill(icon: widget.skill.icon!)
+              ],
+            ),
           ),
         ),
       ),

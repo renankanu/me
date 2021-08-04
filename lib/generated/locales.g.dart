@@ -22,6 +22,7 @@ class LocaleKeys {
   static const aboutSection_aboutMeDescOne = 'aboutSection_aboutMeDescOne';
   static const aboutSection_aboutMeDescTwo = 'aboutSection_aboutMeDescTwo';
   static const skillsSection_thingsIDo = 'skillsSection_thingsIDo';
+  static const skillsSection_flutter = 'skillsSection_flutter';
   static const repoSection_favoriteRepo = 'repoSection_favoriteRepo';
   static const repoSection_myRepo = 'repoSection_myRepo';
   static const repoSection_loadRepo = 'repoSection_loadRepo';
@@ -61,6 +62,7 @@ class Locales {
     'aboutSection_aboutMeDescTwo':
         'Sou desenvolvedor flutter, trabalho na Megaleios. Gosto de trabalhar em equipe, você aprenderá mais rápido e muito mais. Como diz o ditado: \'duas cabeças pensam melhor do que uma\'. Gosto de todos os assuntos que envolvem tecnologia, sou jogador de rugby, gosto de jogos eletrónicos, praticante de musculação. E adoro um café ☕',
     'skillsSection_thingsIDo': 'Coisas que eu faço e sei fazer',
+    'skillsSection_flutter': '- Compreensão da estrutura Flutter',
     'repoSection_favoriteRepo': 'Repositórios favoritos',
     'repoSection_myRepo': 'Meus Repositórios',
     'repoSection_loadRepo': 'Carregando Repositórios',

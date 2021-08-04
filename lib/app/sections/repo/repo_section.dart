@@ -52,7 +52,7 @@ class RepoSection extends StatelessWidget {
                       ),
                     );
                   }
-                  final dynamic repositoriesPinned =
+                  List repositoriesPinned =
                       result.data!['viewer']['pinnedItems']['nodes'];
                   return Padding(
                     padding: const EdgeInsets.only(top: 60),

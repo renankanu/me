@@ -6,9 +6,11 @@ abstract class Routes {
 
   static const HOME = _Paths.HOME;
   static const NOT_FOUND = _Paths.NOT_FOUND;
+  static const DETAIL_SKILL = _Paths.DETAIL_SKILL;
 }
 
 abstract class _Paths {
   static const HOME = '/';
   static const NOT_FOUND = '/not-found';
+  static const DETAIL_SKILL = '/detail-skill';
 }

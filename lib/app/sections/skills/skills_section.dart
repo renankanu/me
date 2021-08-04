@@ -1,12 +1,67 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:me/app/core/image.dart';
+import 'package:me/app/model/skill.dart';
 import 'package:me/app/modules/home/home_controller.dart';
 import 'package:me/app/sections/skills/widgets/item_skill.dart';
 import 'package:me/app/widgets/base_section_container.dart';
 import 'package:me/app/widgets/title_section.dart';
 import 'package:me/generated/locales.g.dart';
 import 'package:visibility_detector/visibility_detector.dart';
+
+final listSkills = [
+  Skill(name: 'Flutter', icon: '', skillType: SkillType.flutter),
+  Skill(
+    name: 'React Native',
+    icon: CustomizedImages.icReactNative,
+    skillType: SkillType.rn,
+  ),
+  Skill(
+    name: 'JavaScript',
+    icon: CustomizedImages.icJs,
+    skillType: SkillType.js,
+  ),
+  Skill(
+    name: 'TypeScript',
+    icon: CustomizedImages.icTs,
+    skillType: SkillType.ts,
+  ),
+  Skill(
+    name: 'FireBase',
+    icon: CustomizedImages.icFirebase,
+    skillType: SkillType.firebase,
+  ),
+  Skill(
+    name: 'Apple Store',
+    icon: CustomizedImages.icAppStoreIos,
+    skillType: SkillType.appleStore,
+  ),
+  Skill(
+    name: 'Google Play',
+    icon: CustomizedImages.icGooglePlay,
+    skillType: SkillType.googlePlay,
+  ),
+  Skill(
+    name: 'Git',
+    icon: CustomizedImages.icGit,
+    skillType: SkillType.git,
+  ),
+  Skill(
+    name: 'Php',
+    icon: CustomizedImages.icPhp,
+    skillType: SkillType.php,
+  ),
+  Skill(
+    name: 'Docker',
+    icon: CustomizedImages.icDocker,
+    skillType: SkillType.docker,
+  ),
+  Skill(
+    name: 'Aws',
+    icon: CustomizedImages.icAws,
+    skillType: SkillType.aws,
+  ),
+];
 
 class SkillsSection extends StatelessWidget {
   SkillsSection({Key? key}) : super(key: key);
@@ -43,24 +98,11 @@ class SkillsSection extends StatelessWidget {
                   spacing: 60,
                   runSpacing: 58,
                   children: [
-                    ItemSkill(label: 'Flutter', icon: ''),
-                    ItemSkill(
-                        label: 'React Native',
-                        icon: CustomizedImages.icReactNative),
-                    ItemSkill(label: 'JavaScript', icon: CustomizedImages.icJs),
-                    ItemSkill(label: 'TypeScript', icon: CustomizedImages.icTs),
-                    ItemSkill(
-                        label: 'Firebase', icon: CustomizedImages.icFirebase),
-                    ItemSkill(
-                        label: 'Apple Store',
-                        icon: CustomizedImages.icAppStoreIos),
-                    ItemSkill(
-                        label: 'Google Play',
-                        icon: CustomizedImages.icGooglePlay),
-                    ItemSkill(label: 'Git', icon: CustomizedImages.icGit),
-                    ItemSkill(label: 'Php', icon: CustomizedImages.icPhp),
-                    ItemSkill(label: 'Docker', icon: CustomizedImages.icDocker),
-                    ItemSkill(label: 'AWS', icon: CustomizedImages.icAws),
+                    ...listSkills.map(
+                      (skill) => ItemSkill(
+                        skill: skill,
+                      ),
+                    ),
                   ],
                 ),
               ),
