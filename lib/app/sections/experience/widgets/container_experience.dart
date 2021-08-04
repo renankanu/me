@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:me/app/core/core.dart';
 
 class ContainerExperience extends StatelessWidget {
   const ContainerExperience({
@@ -51,7 +52,8 @@ class ContainerExperience extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Container(
-                  width: 600,
+                  width:
+                      CustomizedResponsive.isLargeScreen(context) ? 600 : 400,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(4),
                     border: Border.all(
