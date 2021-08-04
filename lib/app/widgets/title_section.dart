@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:me/app/animations/animations.dart';
+import 'package:me/app/core/core.dart';
 
 class TitleSection extends StatelessWidget {
   final String titleSection;
@@ -27,13 +28,18 @@ class TitleSection extends StatelessWidget {
                 ),
                 child: Text(
                   titleSection.substring(0, 2),
-                  style: Get.textTheme.headline5?.copyWith(fontSize: 36),
+                  style: Get.textTheme.headline5?.copyWith(
+                    fontSize:
+                        CustomizedResponsive.isSmallScreen(context) ? 26 : 36,
+                  ),
                 ),
               ),
             ),
             Text(
               titleSection.substring(2),
-              style: Get.textTheme.headline5?.copyWith(fontSize: 36),
+              style: Get.textTheme.headline5?.copyWith(
+                fontSize: CustomizedResponsive.isSmallScreen(context) ? 26 : 36,
+              ),
             )
           ],
         ),

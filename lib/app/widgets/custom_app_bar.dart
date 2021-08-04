@@ -106,11 +106,11 @@ class _CustomAppBarState extends State<CustomAppBar> {
               },
               iconBuilder: (b, size, active) => b
                   ? FaIcon(
-                      FontAwesomeIcons.sun,
+                      FontAwesomeIcons.solidSun,
                       size: 18,
                     )
                   : FaIcon(
-                      FontAwesomeIcons.moon,
+                      FontAwesomeIcons.solidMoon,
                       size: 18,
                     ),
               textBuilder: (b, size, active) => b

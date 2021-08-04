@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:loading_animations/loading_animations.dart';
+import 'package:me/app/core/core.dart';
 import 'package:me/app/core/graphql_query.dart';
 import 'package:me/app/modules/home/home_controller.dart';
 import 'package:me/app/widgets/base_section_container.dart';
@@ -82,44 +83,21 @@ class RepoSection extends StatelessWidget {
                             horizontal: 6,
                             vertical: 16,
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    LocaleKeys.repoSection_totalCommits.tr,
-                                    style: Get.textTheme.headline4!
-                                        .copyWith(fontSize: 16),
-                                  ),
-                                  Text(
-                                    result.data!['viewer']
-                                            ['contributionsCollection']
-                                            ['totalCommitContributions']
-                                        .toString(),
-                                    style: Get.textTheme.headline5!
-                                        .copyWith(fontSize: 16),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    LocaleKeys.repoSection_totalRepo.tr,
-                                    style: Get.textTheme.headline4!
-                                        .copyWith(fontSize: 16),
-                                  ),
-                                  Text(
-                                    result.data!['viewer']['repositories']
-                                            ['totalCount']
-                                        .toString(),
-                                    style: Get.textTheme.headline5!
-                                        .copyWith(fontSize: 16),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
+                          child: CustomizedResponsive.isSmallScreen(context)
+                              ? Column(
+                                  children: [
+                                    totalCommit(result),
+                                    totalRepository(result)
+                                  ],
+                                )
+                              : Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    totalCommit(result),
+                                    totalRepository(result)
+                                  ],
+                                ),
                         ),
                       ],
                     ),
@@ -130,6 +108,38 @@ class RepoSection extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Row totalRepository(QueryResult result) {
+    return Row(
+      children: [
+        Text(
+          LocaleKeys.repoSection_totalRepo.tr,
+          style: Get.textTheme.headline4!.copyWith(fontSize: 16),
+        ),
+        Text(
+          result.data!['viewer']['repositories']['totalCount'].toString(),
+          style: Get.textTheme.headline5!.copyWith(fontSize: 16),
+        ),
+      ],
+    );
+  }
+
+  Row totalCommit(QueryResult result) {
+    return Row(
+      children: [
+        Text(
+          LocaleKeys.repoSection_totalCommits.tr,
+          style: Get.textTheme.headline4!.copyWith(fontSize: 16),
+        ),
+        Text(
+          result.data!['viewer']['contributionsCollection']
+                  ['totalCommitContributions']
+              .toString(),
+          style: Get.textTheme.headline5!.copyWith(fontSize: 16),
+        ),
+      ],
     );
   }
 }

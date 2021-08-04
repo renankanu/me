@@ -14,6 +14,7 @@ class Themes {
     dividerColor: CustomizedColors.black.withOpacity(0.5),
     cardColor: CustomizedColors.ebonyClay,
     disabledColor: CustomizedColors.ebonyClay,
+    primaryIconTheme: IconThemeData(color: CustomizedColors.ebonyClay),
     textTheme: GoogleFonts.rubikTextTheme().copyWith(
       headline1: GoogleFonts.rubik(
         fontSize: 96,
@@ -90,6 +91,7 @@ class Themes {
     dividerColor: CustomizedColors.alto.withOpacity(0.5),
     cardColor: CustomizedColors.white,
     disabledColor: CustomizedColors.white,
+    primaryIconTheme: IconThemeData(color: CustomizedColors.white),
     textTheme: GoogleFonts.rubikTextTheme().copyWith(
       headline1: GoogleFonts.rubik(
         fontSize: 96,
