@@ -1,3 +1,4 @@
+import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -15,6 +16,7 @@ class CustomAppBar extends StatefulWidget {
 
 class _CustomAppBarState extends State<CustomAppBar> {
   final HomeController controller = Get.put(HomeController());
+  bool positive = false;
   final navItems = [
     LocaleKeys.menu_about.tr,
     LocaleKeys.menu_skills.tr,
@@ -88,19 +90,33 @@ class _CustomAppBarState extends State<CustomAppBar> {
                 ),
               ),
             ),
-            MaterialButton(
-              onPressed: () {
+            AnimatedToggleSwitch<bool>.dual(
+              borderColor: Colors.transparent,
+              borderWidth: 0,
+              indicatorColor: Colors.transparent,
+              height: 30,
+              current: Get.isDarkMode ? false : true,
+              first: false,
+              second: true,
+              dif: 0,
+              onChanged: (b) {
                 Get.changeThemeMode(
                   Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,
                 );
               },
-              child: FaIcon(
-                Get.isDarkMode
-                    ? FontAwesomeIcons.lightbulb
-                    : FontAwesomeIcons.solidLightbulb,
-                size: 16,
-              ),
-            )
+              iconBuilder: (b, size, active) => b
+                  ? FaIcon(
+                      FontAwesomeIcons.sun,
+                      size: 18,
+                    )
+                  : FaIcon(
+                      FontAwesomeIcons.moon,
+                      size: 18,
+                    ),
+              textBuilder: (b, size, active) => b
+                  ? Center(child: Text('Dark'))
+                  : Center(child: Text('Light')),
+            ),
           ],
         ),
       ),

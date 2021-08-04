@@ -90,6 +90,7 @@ class CardPinned extends StatelessWidget {
                         FaIcon(
                           FontAwesomeIcons.syncAlt,
                           size: 12,
+                          color: Colors.white,
                         ),
                         SizedBox(width: 8),
                         Text(
