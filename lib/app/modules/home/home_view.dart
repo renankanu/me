@@ -39,15 +39,17 @@ class HomeView extends GetView<HomeController> {
                   padding: EdgeInsets.only(
                     top: !CustomizedResponsive.isSmallScreen() ? height : 0,
                   ),
-                  child: ListView(
-                    children: [
-                      IntroSection(),
-                      AboutSection(key: SectionKeys.about),
-                      SkillsSection(key: SectionKeys.skills),
-                      RepoSection(key: SectionKeys.repo),
-                      ExperienceSection(key: SectionKeys.xp),
-                      Footer()
-                    ],
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        IntroSection(),
+                        AboutSection(key: SectionKeys.about),
+                        SkillsSection(key: SectionKeys.skills),
+                        RepoSection(key: SectionKeys.repo),
+                        ExperienceSection(key: SectionKeys.xp),
+                        Footer(),
+                      ],
+                    ),
                   ),
                 ),
                 Visibility(
