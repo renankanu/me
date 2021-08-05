@@ -26,7 +26,7 @@ class CardPinned extends StatelessWidget {
     return Container(
       constraints: BoxConstraints(maxWidth: 400),
       child: InkWell(
-        onTap: () => _launchInBrowser(repo['url']),
+        onTap: () => _launchInBrowser(repo['url'] ?? ''),
         child: Card(
           shadowColor: CustomizedColors.background,
           elevation: 5,

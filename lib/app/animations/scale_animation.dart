@@ -40,7 +40,7 @@ class _ScaleAnimationTitleSectionState extends State<ScaleAnimationTitleSection>
   @override
   void dispose() {
     super.dispose();
-    // _controller.dispose();
+    _controller.dispose();
   }
 
   @override

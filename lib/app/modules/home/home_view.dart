@@ -38,9 +38,10 @@ class HomeView extends GetView<HomeController> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                      top: !CustomizedResponsive.isSmallScreen(context)
-                          ? height
-                          : 0),
+                    top: !CustomizedResponsive.isSmallScreen(context)
+                        ? height
+                        : 0,
+                  ),
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
@@ -88,15 +89,14 @@ class CustomizedDrawer extends StatelessWidget {
     );
   }
 
-  final List<BuildContext> contexts = [
-    SectionKeys.about.currentContext!,
-    SectionKeys.skills.currentContext!,
-    SectionKeys.repo.currentContext!,
-    SectionKeys.xp.currentContext!,
-  ];
-
   @override
   Widget build(BuildContext context) {
+    final List<BuildContext> contexts = [
+      SectionKeys.about.currentContext!,
+      SectionKeys.skills.currentContext!,
+      SectionKeys.repo.currentContext!,
+      SectionKeys.xp.currentContext!,
+    ];
     return SafeArea(
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 12),
@@ -138,6 +138,7 @@ class CustomizedDrawer extends StatelessWidget {
                         scrollToSpecificContext(
                           contexts[index],
                         );
+                        Get.back();
                       },
                       isActive: index == controller.indexSectionSelected.value,
                       text: navItems[index],
