@@ -52,8 +52,7 @@ class ContainerExperience extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Container(
-                  width:
-                      CustomizedResponsive.isLargeScreen(context) ? 600 : 310,
+                  width: CustomizedResponsive.isLargeScreen() ? 600 : 310,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(4),
                     border: Border.all(

@@ -29,8 +29,7 @@ class TitleSection extends StatelessWidget {
                 child: Text(
                   titleSection.substring(0, 2),
                   style: Get.textTheme.headline5?.copyWith(
-                    fontSize:
-                        CustomizedResponsive.isSmallScreen(context) ? 26 : 36,
+                    fontSize: CustomizedResponsive.isSmallScreen() ? 26 : 36,
                   ),
                 ),
               ),
@@ -38,7 +37,7 @@ class TitleSection extends StatelessWidget {
             Text(
               titleSection.substring(2),
               style: Get.textTheme.headline5?.copyWith(
-                fontSize: CustomizedResponsive.isSmallScreen(context) ? 26 : 36,
+                fontSize: CustomizedResponsive.isSmallScreen() ? 26 : 36,
               ),
             )
           ],

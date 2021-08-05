@@ -11,7 +11,7 @@ class AvatarImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double getSize() {
-      if (CustomizedResponsive.isSmallScreen(context)) {
+      if (CustomizedResponsive.isSmallScreen()) {
         return 160;
       }
       return 320;

@@ -31,11 +31,9 @@ class AboutSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TitleSection(titleSection: LocaleKeys.menu_about.tr),
-              SizedBox(
-                  height:
-                      CustomizedResponsive.isSmallScreen(context) ? 90 : 180),
+              SizedBox(height: CustomizedResponsive.isSmallScreen() ? 90 : 180),
               Visibility(
-                visible: !CustomizedResponsive.isSmallScreen(context),
+                visible: !CustomizedResponsive.isSmallScreen(),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -75,7 +73,7 @@ class Description extends StatelessWidget {
           LocaleKeys.aboutSection_aboutMeDescOne.tr,
           textAlign: TextAlign.center,
           style: Get.textTheme.headline5?.copyWith(
-            fontSize: CustomizedResponsive.isSmallScreen(context) ? 36 : 48,
+            fontSize: CustomizedResponsive.isSmallScreen() ? 36 : 48,
             letterSpacing: 1.5,
           ),
         ),

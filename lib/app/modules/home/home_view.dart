@@ -29,36 +29,29 @@ class HomeView extends GetView<HomeController> {
           color: Get.theme.accentColor,
           location: BannerLocation.topEnd,
           child: Scaffold(
-            appBar:
-                !CustomizedResponsive.isSmallScreen(context) ? null : AppBar(),
-            drawer: !CustomizedResponsive.isSmallScreen(context)
+            appBar: !CustomizedResponsive.isSmallScreen() ? null : AppBar(),
+            drawer: !CustomizedResponsive.isSmallScreen()
                 ? null
                 : CustomizedDrawer(),
             body: Stack(
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                    top: !CustomizedResponsive.isSmallScreen(context)
-                        ? height
-                        : 0,
+                    top: !CustomizedResponsive.isSmallScreen() ? height : 0,
                   ),
                   child: ListView(
                     children: [
-                      Column(
-                        children: [
-                          IntroSection(),
-                          AboutSection(key: SectionKeys.about),
-                          SkillsSection(key: SectionKeys.skills),
-                          RepoSection(key: SectionKeys.repo),
-                          ExperienceSection(key: SectionKeys.xp),
-                          Footer(),
-                        ],
-                      )
+                      IntroSection(),
+                      AboutSection(key: SectionKeys.about),
+                      SkillsSection(key: SectionKeys.skills),
+                      RepoSection(key: SectionKeys.repo),
+                      ExperienceSection(key: SectionKeys.xp),
+                      Footer()
                     ],
                   ),
                 ),
                 Visibility(
-                  visible: !CustomizedResponsive.isSmallScreen(context),
+                  visible: !CustomizedResponsive.isSmallScreen(),
                   child: CustomAppBar(),
                 ),
               ],

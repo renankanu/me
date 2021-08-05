@@ -41,9 +41,9 @@ class _MenuItemState extends State<MenuItem> {
       child: AnimatedContainer(
         duration: Duration(milliseconds: 800),
         margin: EdgeInsets.symmetric(
-            horizontal: CustomizedResponsive.isSmallScreen(context) ? 5 : 15),
+            horizontal: CustomizedResponsive.isSmallScreen() ? 5 : 15),
         padding: EdgeInsets.symmetric(
-            vertical: CustomizedResponsive.isSmallScreen(context) ? 15 : 5),
+            vertical: CustomizedResponsive.isSmallScreen() ? 15 : 5),
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(

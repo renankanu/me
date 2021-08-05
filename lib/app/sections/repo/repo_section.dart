@@ -83,7 +83,7 @@ class RepoSection extends StatelessWidget {
                             horizontal: 6,
                             vertical: 16,
                           ),
-                          child: CustomizedResponsive.isSmallScreen(context)
+                          child: CustomizedResponsive.isSmallScreen()
                               ? Column(
                                   children: [
                                     totalCommit(result),
