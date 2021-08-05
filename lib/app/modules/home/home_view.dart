@@ -42,7 +42,7 @@ class HomeView extends GetView<HomeController> {
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        IntroSection(),
+                        IntroSection(key: SectionKeys.intro),
                         AboutSection(key: SectionKeys.about),
                         SkillsSection(key: SectionKeys.skills),
                         RepoSection(key: SectionKeys.repo),
@@ -105,20 +105,26 @@ class CustomizedDrawer extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              padding: EdgeInsets.symmetric(
-                vertical: 30,
-              ),
-              child: Center(
-                child: Column(
-                  children: [
-                    AvatarImage(),
-                    SizedBox(height: 16),
-                    Text(
-                      'RenanKanu;',
-                      style: Get.textTheme.headline5,
-                    ),
-                  ],
+            InkWell(
+              onTap: () {
+                scrollToSpecificContext(SectionKeys.intro.currentContext!);
+                Get.back();
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  vertical: 30,
+                ),
+                child: Center(
+                  child: Column(
+                    children: [
+                      AvatarImage(),
+                      SizedBox(height: 16),
+                      Text(
+                        'RenanKanu;',
+                        style: Get.textTheme.headline5,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
