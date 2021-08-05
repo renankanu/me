@@ -78,16 +78,18 @@ class RepoSection extends StatelessWidget {
                             },
                           ).toList(),
                         ),
-                        Padding(
+                        Container(
+                          width: double.infinity,
                           padding: const EdgeInsets.symmetric(
                             horizontal: 6,
                             vertical: 16,
                           ),
                           child: CustomizedResponsive.isSmallScreen()
                               ? Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
                                     totalCommit(result),
-                                    totalRepository(result)
+                                    totalRepository(result),
                                   ],
                                 )
                               : Row(
@@ -111,35 +113,43 @@ class RepoSection extends StatelessWidget {
     );
   }
 
-  Row totalRepository(QueryResult result) {
-    return Row(
-      children: [
-        Text(
-          LocaleKeys.repoSection_totalRepo.tr,
-          style: Get.textTheme.headline4!.copyWith(fontSize: 16),
-        ),
-        Text(
-          result.data!['viewer']['repositories']['totalCount'].toString(),
-          style: Get.textTheme.headline5!.copyWith(fontSize: 16),
-        ),
-      ],
+  Container totalRepository(QueryResult result) {
+    return Container(
+      padding: EdgeInsets.only(bottom: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            LocaleKeys.repoSection_totalRepo.tr,
+            style: Get.textTheme.headline4!.copyWith(fontSize: 16),
+          ),
+          Text(
+            result.data!['viewer']['repositories']['totalCount'].toString(),
+            style: Get.textTheme.headline5!.copyWith(fontSize: 16),
+          ),
+        ],
+      ),
     );
   }
 
-  Row totalCommit(QueryResult result) {
-    return Row(
-      children: [
-        Text(
-          LocaleKeys.repoSection_totalCommits.tr,
-          style: Get.textTheme.headline4!.copyWith(fontSize: 16),
-        ),
-        Text(
-          result.data!['viewer']['contributionsCollection']
-                  ['totalCommitContributions']
-              .toString(),
-          style: Get.textTheme.headline5!.copyWith(fontSize: 16),
-        ),
-      ],
+  Container totalCommit(QueryResult result) {
+    return Container(
+      padding: EdgeInsets.only(bottom: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            LocaleKeys.repoSection_totalCommits.tr,
+            style: Get.textTheme.headline4!.copyWith(fontSize: 16),
+          ),
+          Text(
+            result.data!['viewer']['contributionsCollection']
+                    ['totalCommitContributions']
+                .toString(),
+            style: Get.textTheme.headline5!.copyWith(fontSize: 16),
+          ),
+        ],
+      ),
     );
   }
 }
