@@ -42,17 +42,19 @@ class HomeView extends GetView<HomeController> {
                         ? height
                         : 0,
                   ),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        IntroSection(),
-                        AboutSection(key: SectionKeys.about),
-                        SkillsSection(key: SectionKeys.skills),
-                        RepoSection(key: SectionKeys.repo),
-                        ExperienceSection(key: SectionKeys.xp),
-                        Footer(),
-                      ],
-                    ),
+                  child: ListView(
+                    children: [
+                      Column(
+                        children: [
+                          IntroSection(),
+                          AboutSection(key: SectionKeys.about),
+                          SkillsSection(key: SectionKeys.skills),
+                          RepoSection(key: SectionKeys.repo),
+                          ExperienceSection(key: SectionKeys.xp),
+                          Footer(),
+                        ],
+                      )
+                    ],
                   ),
                 ),
                 Visibility(
