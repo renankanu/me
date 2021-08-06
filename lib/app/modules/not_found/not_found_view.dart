@@ -13,6 +13,7 @@ class NotFoundView extends StatelessWidget {
           Image.asset(
             CustomizedImages.notFound,
             width: 350,
+            semanticLabel: 'image not found',
           ),
           SizedBox(
             height: 10,

@@ -32,6 +32,7 @@ class BaseSectionContainer extends StatelessWidget {
                 child: Image.asset(
                   CustomizedImages.bg,
                   height: constraint.maxWidth * .432,
+                  semanticLabel: 'background image',
                 ),
               ),
             ),

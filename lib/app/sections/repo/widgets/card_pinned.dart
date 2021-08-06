@@ -91,6 +91,7 @@ class CardPinned extends StatelessWidget {
                           FontAwesomeIcons.syncAlt,
                           size: 12,
                           color: Colors.white,
+                          semanticLabel: 'icon sync repository',
                         ),
                         SizedBox(width: 8),
                         Text(

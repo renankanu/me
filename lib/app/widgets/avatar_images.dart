@@ -31,6 +31,7 @@ class AvatarImage extends StatelessWidget {
             padding: const EdgeInsets.all(1),
             child: Image.asset(
               CustomizedImages.me,
+              semanticLabel: 'Avatar me',
             ),
           ),
           Container(

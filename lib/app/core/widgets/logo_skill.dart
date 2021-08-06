@@ -17,6 +17,7 @@ class LogoSkill extends StatelessWidget {
       child: Image.asset(
         icon,
         height: height ?? 100,
+        semanticLabel: 'logo $icon',
       ),
       replacement: FlutterLogo(
         size: height ?? 100,

@@ -49,28 +49,31 @@ class _CustomAppBarState extends State<CustomAppBar> {
         child: Row(
           children: [
             Expanded(
-              child: InkWell(
-                onTap: () {
-                  scrollToSpecificContext(SectionKeys.intro.currentContext!);
-                },
-                child: RichText(
-                  text: TextSpan(
-                    text: 'R',
-                    style: Get.textTheme.headline1?.copyWith(
-                      fontWeight: FontWeight.w900,
-                      color: Get.theme.cardColor,
-                      fontSize: 26,
+              child: Semantics(
+                button: true,
+                child: InkWell(
+                  onTap: () {
+                    scrollToSpecificContext(SectionKeys.intro.currentContext!);
+                  },
+                  child: RichText(
+                    text: TextSpan(
+                      text: 'R',
+                      style: Get.textTheme.headline1?.copyWith(
+                        fontWeight: FontWeight.w900,
+                        color: Get.theme.cardColor,
+                        fontSize: 26,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: 'K',
+                          style: TextStyle(
+                            color: Get.theme.cardColor,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 26,
+                          ),
+                        )
+                      ],
                     ),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'K',
-                        style: TextStyle(
-                          color: Get.theme.cardColor,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 26,
-                        ),
-                      )
-                    ],
                   ),
                 ),
               ),

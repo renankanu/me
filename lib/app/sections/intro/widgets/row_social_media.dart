@@ -52,6 +52,7 @@ class _RowSocialMediaState extends State<RowSocialMedia> {
             children: list
                 .map(
                   (socialMedia) => SocialMediaButton(
+                    key: UniqueKey(),
                     onPressSocialMedia: () {
                       _launchInBrowser(socialMedia.url);
                     },
@@ -110,6 +111,7 @@ class _SocialMediaButtonState extends State<SocialMediaButton> {
             child: FaIcon(
               widget.icon,
               color: Get.theme.accentColor,
+              semanticLabel: 'Icon social media',
             ),
           ),
         ),

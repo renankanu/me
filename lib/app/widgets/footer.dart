@@ -81,6 +81,7 @@ class _FooterState extends State<Footer> with SingleTickerProviderStateMixin {
                       child: Center(
                         child: FaIcon(
                           FontAwesomeIcons.chevronUp,
+                          semanticLabel: 'icon arrow to top',
                         ),
                       ),
                     ),
