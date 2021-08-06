@@ -6,7 +6,12 @@ import 'package:me/app/core/image.dart';
 class AvatarImage extends StatelessWidget {
   const AvatarImage({
     Key? key,
+    this.size,
+    this.borderWidth,
   }) : super(key: key);
+
+  final double? size;
+  final double? borderWidth;
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +23,8 @@ class AvatarImage extends StatelessWidget {
     }
 
     return Container(
-      height: getSize(),
-      width: getSize(),
+      height: size ?? getSize(),
+      width: size ?? getSize(),
       child: Stack(
         children: [
           Padding(
@@ -31,7 +36,7 @@ class AvatarImage extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               border: Border.all(
-                width: 4,
+                width: borderWidth ?? 4,
                 color: Get.theme.accentColor,
               ),
               borderRadius: BorderRadius.all(

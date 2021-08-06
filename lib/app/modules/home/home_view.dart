@@ -116,11 +116,16 @@ class CustomizedDrawer extends StatelessWidget {
                 child: Center(
                   child: Column(
                     children: [
-                      AvatarImage(),
+                      AvatarImage(
+                        size: 120,
+                        borderWidth: 2,
+                      ),
                       SizedBox(height: 16),
                       Text(
                         'RenanKanu;',
-                        style: Get.textTheme.headline5,
+                        style: Get.textTheme.headline4!.copyWith(
+                          fontSize: 18,
+                        ),
                       ),
                     ],
                   ),
