@@ -1,12 +1,13 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:me/app/modules/not_found/not_found_view.dart';
 import 'package:me/generated/locales.g.dart';
 import 'package:url_strategy/url_strategy.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-
-import 'package:get/get.dart';
 
 import 'app/routes/app_pages.dart';
 import 'app/theme/themes.dart';
@@ -15,6 +16,10 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setPathUrlStrategy();
   await dotenv.load(fileName: ".env");
+  LicenseRegistry.addLicense(() async* {
+    final license = await rootBundle.loadString('google_fonts/OFL.txt');
+    yield LicenseEntryWithLineBreaks(['google_fonts'], license);
+  });
   runApp(App());
 }
 
