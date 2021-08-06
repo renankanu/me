@@ -460,6 +460,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.0"
+  thememode_selector:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: main
+      resolved-ref: "4f888c2464bda9a1f0fb3451937086bb629ee5d3"
+      url: "https://github.com/renankanu/thememode_selector.git"
+    source: git
+    version: "0.1.0"
   typed_data:
     dependency: transitive
     description:

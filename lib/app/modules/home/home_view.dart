@@ -1,6 +1,4 @@
-import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:me/app/core/core.dart';
 import 'package:me/app/modules/home/widgets/initial_loading.dart';
@@ -13,6 +11,7 @@ import 'package:me/app/widgets/avatar_images.dart';
 import 'package:me/app/widgets/custom_app_bar.dart';
 import 'package:me/app/widgets/footer.dart';
 import 'package:me/app/widgets/menu_item.dart';
+import 'package:me/app/widgets/theme_mode_toggle.dart';
 import 'package:me/generated/locales.g.dart';
 
 import 'home_controller.dart';
@@ -150,40 +149,11 @@ class CustomizedDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(
-              child: Container(),
-            ),
+            Spacer(),
             Container(
-              padding: EdgeInsets.only(bottom: 64),
-              child: Center(
-                child: AnimatedToggleSwitch<bool>.dual(
-                  borderColor: Colors.transparent,
-                  borderWidth: 0,
-                  indicatorColor: Colors.transparent,
-                  height: 30,
-                  current: Get.isDarkMode ? false : true,
-                  first: false,
-                  second: true,
-                  dif: 0,
-                  onChanged: (b) {
-                    Get.changeThemeMode(
-                      Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,
-                    );
-                  },
-                  iconBuilder: (b, size, active) => b
-                      ? FaIcon(
-                          FontAwesomeIcons.solidSun,
-                          size: 18,
-                        )
-                      : FaIcon(
-                          FontAwesomeIcons.solidMoon,
-                          size: 18,
-                        ),
-                  textBuilder: (b, size, active) => b
-                      ? Center(child: Text('Dark'))
-                      : Center(child: Text('Light')),
-                ),
-              ),
+              alignment: Alignment.center,
+              padding: EdgeInsets.symmetric(vertical: 16),
+              child: ThemeModeToggle(),
             ),
           ],
         ),

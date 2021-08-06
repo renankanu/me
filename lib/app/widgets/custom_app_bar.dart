@@ -1,10 +1,9 @@
-import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:me/app/core/core.dart';
 import 'package:me/app/modules/home/home_controller.dart';
 import 'package:me/app/widgets/menu_item.dart';
+import 'package:me/app/widgets/theme_mode_toggle.dart';
 import 'package:me/generated/locales.g.dart';
 
 class CustomAppBar extends StatefulWidget {
@@ -95,33 +94,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                 ),
               ),
             ),
-            AnimatedToggleSwitch<bool>.dual(
-              borderColor: Colors.transparent,
-              borderWidth: 0,
-              indicatorColor: Colors.transparent,
-              height: 30,
-              current: Get.isDarkMode ? false : true,
-              first: false,
-              second: true,
-              dif: 0,
-              onChanged: (b) {
-                Get.changeThemeMode(
-                  Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,
-                );
-              },
-              iconBuilder: (b, size, active) => b
-                  ? FaIcon(
-                      FontAwesomeIcons.solidSun,
-                      size: 18,
-                    )
-                  : FaIcon(
-                      FontAwesomeIcons.solidMoon,
-                      size: 18,
-                    ),
-              textBuilder: (b, size, active) => b
-                  ? Center(child: Text('Dark'))
-                  : Center(child: Text('Light')),
-            ),
+            ThemeModeToggle(height: 32),
           ],
         ),
       ),

@@ -23,6 +23,10 @@ dependencies:
   url_launcher: ^6.0.8
   url_strategy: ^0.2.0
   visibility_detector: ^0.2.0
+  thememode_selector:
+    git:
+      url: https://github.com/renankanu/thememode_selector.git
+      ref: main
 
 dev_dependencies:
   flutter_test:
