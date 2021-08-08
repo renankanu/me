@@ -79,17 +79,17 @@ class Locales {
     'repoSection_favoriteRepo': 'Favorite repositories',
     'repoSection_myRepo': 'My repositories',
     'repoSection_loadRepo': 'Loading repositories',
-    'repoSection_totalCommits': 'totalDeCommits: ',
+    'repoSection_totalCommits': 'Total Commits: ',
     'repoSection_totalRepo': 'Total repositories: ',
     'repoSection_oppsError': 'Oppss! Happened something unexpected. 😕',
     'experienceSection_megaTitle': 'Megaleios',
     'experienceSection_megaDate': 'Current',
     'experienceSection_megaDescription':
-        '- Development with flutter; \n- Modular(dependency management, routes); \n- Bloc, RxDart, GetX; \n- Integração com Firebase; \n- Integração com OneSignal; \n- Publicar App nas lojas(Apple e GooglePlay); \n- CD com Bitrise; \n- Integração com APIs REST; \n- Visionamento de código com git; \n- Desenvolvimento com React Native;',
+        '- Development with flutter; \n- Modular(dependency management, routes); \n- Bloc, RxDart, GetX; \n- Integration with firebase; \n- Integration with Onesignal; \n- Publish App in Stores (Apple and GooglePlay); \n- CD with Bitrise; \n- Integration with APIs REST; \n- Visioning code with git; \n- Development with React Native;',
     'experienceSection_sisterraTitle': 'Sisterra',
     'experienceSection_sisterraDate': '2015 - 2019',
     'experienceSection_sisterraDescription':
-        '- Desenvolvimento de aplicativos para Android nativo (Java e Kotlin); \n- Desenvolvimento de aplicações em PHP utilizando DDD para back-end; \n- APIs REST; \n- CQRS pattern; \n- Conhecimento em Docker; \n- Publicar App nas lojas(Apple e GooglePlay); \n- Conhecimento em AWS (Lambda, SNS, SQS, SES, EC2, RDS, S3); \n- Integração com APIs REST; \n- Usuário Linux (GNU / Linux Ubuntu);',
+        '- Application development for native android (Java and Kotlin); \n- Development of PHP applications using DDD for back-end; \n- APIs REST; \n- CQRS pattern; \n- Knowledge in Docker; \n- Publish App in Stores (Apple and GooglePlay); \n- Knowledge in AWS (Lambda, SNS, SQS, SES, EC2, RDS, S3); \n- Integration with APIs REST; \n- Linux user (GNU / Linux Ubuntu);',
   };
   static const pt_BR = {
     'menu_about': 'Sobre',
