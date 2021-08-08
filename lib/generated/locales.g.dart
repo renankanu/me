@@ -15,8 +15,6 @@ class LocaleKeys {
   static const menu_skills = 'menu_skills';
   static const menu_repositories = 'menu_repositories';
   static const menu_experiences = 'menu_experiences';
-  static const menu_aboutMeDescOne = 'menu_aboutMeDescOne';
-  static const menu_aboutMeDescTwo = 'menu_aboutMeDescTwo';
   static const aboutSection_tagMobileDeveloper =
       'aboutSection_tagMobileDeveloper';
   static const aboutSection_aboutMeDescOne = 'aboutSection_aboutMeDescOne';
@@ -56,10 +54,42 @@ class Locales {
     'menu_skills': 'Skills',
     'menu_repositories': 'Repositories',
     'menu_experiences': 'Experiences',
-    'menu_aboutMeDescOne':
-        'Hello, my name is Renan, I\'m from Cianorte-PR. I started programming in 2016 as a Native Android developer with Java, in 2018 I started programming Android Native with Kotlin, PHP and worked with some AWS services such as: eC2, RDS, SNS, SES, S3 ... And in the second half of 2019 I started programming in React Native and Flutter at Megaleios and I am so far.',
-    'menu_aboutMeDescTwo':
-        'I like all subjects that involve technology, rugby player, I like electronic games, bodybuilder and English student. Coffee, coffee and coffee ☕',
+    'aboutSection_tagMobileDeveloper': 'Mobile Developer. 📱',
+    'aboutSection_aboutMeDescOne': 'Hello, my name is Renan.',
+    'aboutSection_aboutMeDescTwo':
+        'I am a Flutter developer, I work in Megaleios.I like to work as a team, you\'ll learn faster and more.As the saying goes: \'Two heads think better than one\'.I like all the subjects that involve technology, I am Rugby player, I like electronic games, bodybuilding practitioner.And I love coffee ☕',
+    'skillsSection_thingsIDo': 'Things I do and I can do',
+    'skillsSection_flutter':
+        '-Understanding the Flutter structure;\n- Modular(dependency management, routes); \n- Bloc, RxDart, GetX;\n- Integration with firebase;\n- Integration with Onesignal;\n- Publication in stores(Apple and Google Play);\n- CD with Bitrise;\n-Integration with APIs REST;\n- Visioning code with git;',
+    'skillsSection_rn':
+        '- Knowledge in ES6;\n- Hooks;\n- Knowledge in Redux; \n- ESLint;',
+    'skillsSection_js':
+        '- JavaScript structures for node.js; \n- NPM, Bower, JSPM; \n- EcmaScript 6; \n- TypeScript; \n- React.js;',
+    'skillsSection_firebase':
+        '- Authentication;\n- Realtime Database;\n- Hosting;\n- Crashlytics; \n- App Distribution; \n- Analytics;',
+    'skillsSection_appleStore': '- Store Publication;\n- TestFlight;',
+    'skillsSection_googlePlay': '- Store Publication;',
+    'skillsSection_git': '- Git Command Line; \n- Versionament like git;',
+    'skillsSection_php':
+        '- Creation of REST API;\n - Unitary tests; \n- CQRS;\n - DDD; \n- Symfony;',
+    'skillsSection_docker':
+        '- Rede de contêiner no Docker;\n - Prometheus; \n- Grafana;',
+    'skillsSection_aws':
+        '-Lambda;\n- SNS;\n- SQS;\n- SES;\n- EC2;\n- RDS;\n- S3;',
+    'repoSection_favoriteRepo': 'Favorite repositories',
+    'repoSection_myRepo': 'My repositories',
+    'repoSection_loadRepo': 'Loading repositories',
+    'repoSection_totalCommits': 'totalDeCommits: ',
+    'repoSection_totalRepo': 'Total repositories: ',
+    'repoSection_oppsError': 'Oppss! Happened something unexpected. 😕',
+    'experienceSection_megaTitle': 'Megaleios',
+    'experienceSection_megaDate': 'Current',
+    'experienceSection_megaDescription':
+        '- Development with flutter; \n- Modular(dependency management, routes); \n- Bloc, RxDart, GetX; \n- Integração com Firebase; \n- Integração com OneSignal; \n- Publicar App nas lojas(Apple e GooglePlay); \n- CD com Bitrise; \n- Integração com APIs REST; \n- Visionamento de código com git; \n- Desenvolvimento com React Native;',
+    'experienceSection_sisterraTitle': 'Sisterra',
+    'experienceSection_sisterraDate': '2015 - 2019',
+    'experienceSection_sisterraDescription':
+        '- Desenvolvimento de aplicativos para Android nativo (Java e Kotlin); \n- Desenvolvimento de aplicações em PHP utilizando DDD para back-end; \n- APIs REST; \n- CQRS pattern; \n- Conhecimento em Docker; \n- Publicar App nas lojas(Apple e GooglePlay); \n- Conhecimento em AWS (Lambda, SNS, SQS, SES, EC2, RDS, S3); \n- Integração com APIs REST; \n- Usuário Linux (GNU / Linux Ubuntu);',
   };
   static const pt_BR = {
     'menu_about': 'Sobre',

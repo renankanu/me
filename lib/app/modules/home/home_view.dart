@@ -8,6 +8,7 @@ import 'package:me/app/sections/intro/intro_section.dart';
 import 'package:me/app/sections/repo/repo_section.dart';
 import 'package:me/app/sections/skills/skills_section.dart';
 import 'package:me/app/widgets/avatar_images.dart';
+import 'package:me/app/widgets/container_flag.dart';
 import 'package:me/app/widgets/custom_app_bar.dart';
 import 'package:me/app/widgets/footer.dart';
 import 'package:me/app/widgets/menu_item.dart';
@@ -70,13 +71,6 @@ class CustomizedDrawer extends StatelessWidget {
     Key? key,
   }) : super(key: key);
   final HomeController controller = Get.put(HomeController());
-  final navItems = [
-    LocaleKeys.menu_about.tr,
-    LocaleKeys.menu_skills.tr,
-    LocaleKeys.menu_repositories.tr,
-    LocaleKeys.menu_experiences.tr
-  ];
-
   void scrollToSpecificContext(BuildContext context) {
     Scrollable.ensureVisible(
       context,
@@ -87,6 +81,13 @@ class CustomizedDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final navItems = [
+      LocaleKeys.menu_about.tr,
+      LocaleKeys.menu_skills.tr,
+      LocaleKeys.menu_repositories.tr,
+      LocaleKeys.menu_experiences.tr
+    ];
+
     final List<BuildContext> contexts = [
       SectionKeys.about.currentContext!,
       SectionKeys.skills.currentContext!,
@@ -158,7 +159,13 @@ class CustomizedDrawer extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               padding: EdgeInsets.symmetric(vertical: 16),
-              child: ThemeModeToggle(),
+              child: Column(
+                children: [
+                  ThemeModeToggle(),
+                  SizedBox(height: 12),
+                  ContainerFlag(),
+                ],
+              ),
             ),
           ],
         ),

@@ -11,7 +11,6 @@ import 'package:url_strategy/url_strategy.dart';
 
 import 'app/routes/app_pages.dart';
 import 'app/theme/themes.dart';
-import 'generated/localization_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -44,7 +43,6 @@ class App extends StatelessWidget {
         link: link,
       ),
     );
-    print(Get.locale);
     return GraphQLProvider(
       client: client,
       child: GetMaterialApp(
@@ -53,7 +51,6 @@ class App extends StatelessWidget {
         locale: Locale('pt', 'BR'),
         debugShowCheckedModeBanner: false,
         supportedLocales: supportedLocales,
-        translations: LocalizationService(),
         localizationsDelegates: [GlobalMaterialLocalizations.delegate],
         localeResolutionCallback:
             (Locale? locale, Iterable<Locale> supportedLocales) {

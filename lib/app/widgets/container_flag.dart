@@ -8,13 +8,14 @@ class ContainerFlag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         FlagContainer(
           icon: CustomizedImages.icBr,
           onPress: () {
             Get.updateLocale(Locale('pt', 'BR'));
           },
-          isSelected: true,
+          isSelected: Get.locale == Locale('en', 'US'),
         ),
         SizedBox(width: 8),
         FlagContainer(
@@ -22,7 +23,7 @@ class ContainerFlag extends StatelessWidget {
           onPress: () {
             Get.updateLocale(Locale('en', 'US'));
           },
-          isSelected: false,
+          isSelected: Get.locale != Locale('en', 'US'),
         ),
       ],
     );

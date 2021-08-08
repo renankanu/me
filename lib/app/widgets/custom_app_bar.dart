@@ -17,21 +17,21 @@ class CustomAppBar extends StatefulWidget {
 class _CustomAppBarState extends State<CustomAppBar> {
   final HomeController controller = Get.put(HomeController());
   bool positive = false;
-  final navItems = [
-    LocaleKeys.menu_about.tr,
-    LocaleKeys.menu_skills.tr,
-    LocaleKeys.menu_repositories.tr,
-    LocaleKeys.menu_experiences.tr
-  ];
-  final List<BuildContext> contexts = [
-    SectionKeys.about.currentContext!,
-    SectionKeys.skills.currentContext!,
-    SectionKeys.repo.currentContext!,
-    SectionKeys.xp.currentContext!,
-  ];
 
   @override
   Widget build(BuildContext context) {
+    final List<BuildContext> contexts = [
+      SectionKeys.about.currentContext!,
+      SectionKeys.skills.currentContext!,
+      SectionKeys.repo.currentContext!,
+      SectionKeys.xp.currentContext!,
+    ];
+    final navItems = [
+      LocaleKeys.menu_about.tr,
+      LocaleKeys.menu_skills.tr,
+      LocaleKeys.menu_repositories.tr,
+      LocaleKeys.menu_experiences.tr
+    ];
     var height = AppBar().preferredSize.height;
     return Container(
       height: height,

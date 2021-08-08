@@ -3,8 +3,40 @@
         "about": "About",
         "skills": "Skills",
         "repositories": "Repositories",
-        "experiences": "Experiences",
-        "aboutMeDescOne": "Hello, my name is Renan, I'm from Cianorte-PR. I started programming in 2016 as a Native Android developer with Java, in 2018 I started programming Android Native with Kotlin, PHP and worked with some AWS services such as: eC2, RDS, SNS, SES, S3 ... And in the second half of 2019 I started programming in React Native and Flutter at Megaleios and I am so far.",
-        "aboutMeDescTwo": "I like all subjects that involve technology, rugby player, I like electronic games, bodybuilder and English student. Coffee, coffee and coffee ☕"
+        "experiences": "Experiences"
+    },
+    "aboutSection": {
+        "tagMobileDeveloper": "Mobile Developer. 📱",
+        "aboutMeDescOne": "Hello, my name is Renan.",
+        "aboutMeDescTwo": "I am a Flutter developer, I work in Megaleios.I like to work as a team, you'll learn faster and more.As the saying goes: 'Two heads think better than one'.I like all the subjects that involve technology, I am Rugby player, I like electronic games, bodybuilding practitioner.And I love coffee ☕"
+    },
+    "skillsSection": {
+        "thingsIDo": "Things I do and I can do",
+        "flutter": "-Understanding the Flutter structure;\n- Modular(dependency management, routes); \n- Bloc, RxDart, GetX;\n- Integration with firebase;\n- Integration with Onesignal;\n- Publication in stores(Apple and Google Play);\n- CD with Bitrise;\n-Integration with APIs REST;\n- Visioning code with git;",
+        "rn": "- Knowledge in ES6;\n- Hooks;\n- Knowledge in Redux; \n- ESLint;",
+        "js": "- JavaScript structures for node.js; \n- NPM, Bower, JSPM; \n- EcmaScript 6; \n- TypeScript; \n- React.js;",
+        "firebase": "- Authentication;\n- Realtime Database;\n- Hosting;\n- Crashlytics; \n- App Distribution; \n- Analytics;",
+        "appleStore": "- Store Publication;\n- TestFlight;",
+        "googlePlay": "- Store Publication;",
+        "git": "- Git Command Line; \n- Versionament like git;",
+        "php": "- Creation of REST API;\n - Unitary tests; \n- CQRS;\n - DDD; \n- Symfony;",
+        "docker": "- Rede de contêiner no Docker;\n - Prometheus; \n- Grafana;",
+        "aws": "-Lambda;\n- SNS;\n- SQS;\n- SES;\n- EC2;\n- RDS;\n- S3;"
+    },
+    "repoSection": {
+        "favoriteRepo": "Favorite repositories",
+        "myRepo": "My repositories",
+        "loadRepo": "Loading repositories",
+        "totalCommits": "Total Commits: ",
+        "totalRepo": "Total repositories: ",
+        "oppsError": "Oppss! Happened something unexpected. 😕"
+    },
+    "experienceSection": {
+        "megaTitle": "Megaleios",
+        "megaDate": "Current",
+        "megaDescription": "- Development with flutter; \n- Modular(dependency management, routes); \n- Bloc, RxDart, GetX; \n- Integration with firebase; \n- Integration with Onesignal; \n- Publish App in Stores (Apple and GooglePlay); \n- CD with Bitrise; \n- Integration with APIs REST; \n- Visioning code with git; \n- Development with React Native;",
+        "sisterraTitle": "Sisterra",
+        "sisterraDate": "2015 - 2019",
+        "sisterraDescription": "- Application development for native android (Java and Kotlin); \n- Development of PHP applications using DDD for back-end; \n- APIs REST; \n- CQRS pattern; \n- Knowledge in Docker; \n- Publish App in Stores (Apple and GooglePlay); \n- Knowledge in AWS (Lambda, SNS, SQS, SES, EC2, RDS, S3); \n- Integration with APIs REST; \n- Linux user (GNU / Linux Ubuntu);"
     }
 }
