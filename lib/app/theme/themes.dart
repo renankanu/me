@@ -3,7 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:me/app/core/colors.dart';
 
 class Themes {
-  final lightTheme = ThemeData.light().copyWith(
+  Themes._();
+  static final lightTheme = ThemeData.light().copyWith(
     visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.light,
     primaryColor: Colors.white,
@@ -79,7 +80,7 @@ class Themes {
     ),
   );
 
-  final darkTheme = ThemeData.dark().copyWith(
+  static final darkTheme = ThemeData.dark().copyWith(
     visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.dark,
     primaryColor: CustomizedColors.ebonyClay,

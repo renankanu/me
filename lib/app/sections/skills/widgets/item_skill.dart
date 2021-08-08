@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
-import 'package:me/app/core/widgets/logo_skill.dart';
 import 'package:me/app/model/skill.dart';
 import 'package:me/app/routes/app_pages.dart';
+import 'package:me/app/widgets/logo_skill.dart';
 
 class ItemSkill extends StatefulWidget {
   const ItemSkill({

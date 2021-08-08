@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:me/app/core/core.dart';
 import 'package:me/app/modules/home/home_controller.dart';
+import 'package:me/app/widgets/container_flag.dart';
 import 'package:me/app/widgets/menu_item.dart';
 import 'package:me/app/widgets/theme_mode_toggle.dart';
 import 'package:me/generated/locales.g.dart';
@@ -98,6 +99,8 @@ class _CustomAppBarState extends State<CustomAppBar> {
               ),
             ),
             ThemeModeToggle(height: 32),
+            SizedBox(width: 18),
+            ContainerFlag()
           ],
         ),
       ),

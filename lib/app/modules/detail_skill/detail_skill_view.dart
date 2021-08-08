@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:me/app/core/widgets/logo_skill.dart';
+import 'package:me/app/widgets/logo_skill.dart';
 
 import 'detail_skill_controller.dart';
 

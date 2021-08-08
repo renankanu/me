@@ -13,4 +13,6 @@ abstract class CustomizedImages {
   static const String bg = 'assets/images/3703.png';
   static const String notFound = 'assets/images/not_found.jpg';
   static const String xpBg = 'assets/images/xp_bg.png';
+  static const String icBr = 'assets/images/ic_br.png';
+  static const String icEn = 'assets/images/ic_en.png';
 }

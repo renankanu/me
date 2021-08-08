@@ -11,6 +11,7 @@ import 'package:url_strategy/url_strategy.dart';
 
 import 'app/routes/app_pages.dart';
 import 'app/theme/themes.dart';
+import 'generated/localization_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,9 +35,7 @@ class App extends StatelessWidget {
     ];
     final String token = dotenv.env['GITHUB_TOKEN']!;
     final HttpLink httpLink = HttpLink('https://api.github.com/graphql');
-    final AuthLink authLink = AuthLink(
-      getToken: () async => 'Bearer $token',
-    );
+    final AuthLink authLink = AuthLink(getToken: () async => 'Bearer $token');
 
     final Link link = authLink.concat(httpLink);
     ValueNotifier<GraphQLClient> client = ValueNotifier(
@@ -45,6 +44,7 @@ class App extends StatelessWidget {
         link: link,
       ),
     );
+    print(Get.locale);
     return GraphQLProvider(
       client: client,
       child: GetMaterialApp(
@@ -53,9 +53,8 @@ class App extends StatelessWidget {
         locale: Locale('pt', 'BR'),
         debugShowCheckedModeBanner: false,
         supportedLocales: supportedLocales,
-        localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
-          GlobalMaterialLocalizations.delegate
-        ],
+        translations: LocalizationService(),
+        localizationsDelegates: [GlobalMaterialLocalizations.delegate],
         localeResolutionCallback:
             (Locale? locale, Iterable<Locale> supportedLocales) {
           for (final Locale supportedLocale in supportedLocales) {
@@ -73,9 +72,9 @@ class App extends StatelessWidget {
           transition: Transition.leftToRightWithFade,
         ),
         getPages: AppPages.routes,
-        theme: Themes().lightTheme,
+        theme: Themes.lightTheme,
         themeMode: ThemeMode.system,
-        darkTheme: Themes().darkTheme,
+        darkTheme: Themes.darkTheme,
       ),
     );
   }
