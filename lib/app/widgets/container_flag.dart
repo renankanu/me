@@ -44,7 +44,7 @@ class FlagContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 38,
+      height: 28,
       child: Stack(
         children: [
           Image.asset(icon),

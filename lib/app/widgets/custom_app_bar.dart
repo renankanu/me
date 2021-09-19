@@ -98,7 +98,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                 ),
               ),
             ),
-            ThemeModeToggle(height: 32),
+            ThemeModeToggle(height: 28),
             SizedBox(width: 18),
             ContainerFlag()
           ],

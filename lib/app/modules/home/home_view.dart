@@ -29,7 +29,12 @@ class HomeView extends GetView<HomeController> {
           color: Get.theme.colorScheme.secondary,
           location: BannerLocation.topEnd,
           child: Scaffold(
-            appBar: !CustomizedResponsive.isSmallScreen() ? null : AppBar(),
+            appBar: !CustomizedResponsive.isSmallScreen()
+                ? null
+                : AppBar(
+                    backgroundColor: Get.theme.primaryColor,
+                    iconTheme: Get.theme.iconTheme,
+                  ),
             drawer: !CustomizedResponsive.isSmallScreen()
                 ? null
                 : CustomizedDrawer(),
@@ -161,7 +166,7 @@ class CustomizedDrawer extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 16),
               child: Column(
                 children: [
-                  ThemeModeToggle(),
+                  ThemeModeToggle(height: 28),
                   SizedBox(height: 12),
                   ContainerFlag(),
                 ],

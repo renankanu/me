@@ -7,7 +7,7 @@ class Themes {
   static final lightTheme = ThemeData.light().copyWith(
     visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.light,
-    primaryColor: Colors.white,
+    primaryColor: CustomizedColors.white,
     colorScheme: ColorScheme.fromSwatch().copyWith(
       secondary: CustomizedColors.burntSienna,
     ),
@@ -17,7 +17,7 @@ class Themes {
     dividerColor: CustomizedColors.black.withOpacity(0.5),
     cardColor: CustomizedColors.ebonyClay,
     disabledColor: CustomizedColors.ebonyClay,
-    primaryIconTheme: IconThemeData(color: CustomizedColors.ebonyClay),
+    iconTheme: IconThemeData(color: CustomizedColors.ebonyClay),
     textTheme: GoogleFonts.rubikTextTheme().copyWith(
       headline1: GoogleFonts.rubik(
         fontSize: 96,
@@ -86,7 +86,6 @@ class Themes {
     visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.dark,
     primaryColor: CustomizedColors.ebonyClay,
-    backgroundColor: CustomizedColors.ebonyClay,
     colorScheme: ColorScheme.fromSwatch().copyWith(
       secondary: CustomizedColors.burntSienna,
     ),
@@ -96,7 +95,7 @@ class Themes {
     dividerColor: CustomizedColors.alto.withOpacity(0.5),
     cardColor: CustomizedColors.white,
     disabledColor: CustomizedColors.white,
-    primaryIconTheme: IconThemeData(color: CustomizedColors.white),
+    iconTheme: IconThemeData(color: CustomizedColors.white),
     textTheme: GoogleFonts.rubikTextTheme().copyWith(
       headline1: GoogleFonts.rubik(
         fontSize: 96,
