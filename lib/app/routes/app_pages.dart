@@ -10,22 +10,22 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
-  static const NOT_FOUND = Routes.NOT_FOUND;
-  static const DETAIL_SKILL = Routes.DETAIL_SKILL;
+  static const initial = Routes.home;
+  static const notFound = Routes.notFound;
+  static const detailSkill = Routes.detailSkill;
 
   static final routes = [
     GetPage(
-      name: _Paths.HOME,
+      name: _Paths.home,
       page: () => HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
-      name: _Paths.HOME,
+      name: _Paths.home,
       page: () => NotFoundView(),
     ),
     GetPage(
-      name: _Paths.DETAIL_SKILL,
+      name: _Paths.detailSkill,
       page: () => DetailSkillView(),
       binding: DetailSkillBinding(),
     ),

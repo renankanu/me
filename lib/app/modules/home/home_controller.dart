@@ -13,11 +13,6 @@ class HomeController extends GetxController {
   }
 
   @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
   void onClose() {}
 
   void initFakeLoading() {

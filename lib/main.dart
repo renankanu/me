@@ -62,7 +62,7 @@ class App extends StatelessWidget {
           }
           return supportedLocales.first;
         },
-        initialRoute: AppPages.INITIAL,
+        initialRoute: AppPages.initial,
         unknownRoute: GetPage(
           name: 'not-found',
           page: () => NotFoundView(),

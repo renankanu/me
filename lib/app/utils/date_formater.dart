@@ -4,7 +4,7 @@ class DateFormateUtils {
   DateFormateUtils._();
 
   static String converterDateWithHours(String date) {
-    var now = new DateTime.now();
+    var now = DateTime.now();
 
     var strToDateTime = DateTime.parse(date);
     final convertLocal = strToDateTime.toLocal();
@@ -25,7 +25,7 @@ class DateFormateUtils {
     }
     if (now.difference(convertLocal).inDays < 6) {
       String weekday = DateFormat('EEEE', 'pt_Br').format(convertLocal);
-      return '$weekday';
+      return weekday;
     }
     return DateFormat('dd/MM/yyyy HH:mm', 'pt_Br').format(convertLocal);
   }

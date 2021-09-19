@@ -4,13 +4,13 @@ part of 'app_pages.dart';
 abstract class Routes {
   Routes._();
 
-  static const HOME = _Paths.HOME;
-  static const NOT_FOUND = _Paths.NOT_FOUND;
-  static const DETAIL_SKILL = _Paths.DETAIL_SKILL;
+  static const home = _Paths.home;
+  static const notFound = _Paths.notFound;
+  static const detailSkill = _Paths.detailSkill;
 }
 
 abstract class _Paths {
-  static const HOME = '/';
-  static const NOT_FOUND = '/not-found';
-  static const DETAIL_SKILL = '/detail-skill';
+  static const home = '/';
+  static const notFound = '/not-found';
+  static const detailSkill = '/detail-skill';
 }

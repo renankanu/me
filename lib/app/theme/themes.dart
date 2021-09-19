@@ -9,7 +9,7 @@ class Themes {
     brightness: Brightness.light,
     primaryColor: Colors.white,
     colorScheme: ColorScheme.fromSwatch().copyWith(
-      primary: CustomizedColors.burntSienna,
+      secondary: CustomizedColors.burntSienna,
     ),
     scaffoldBackgroundColor: CustomizedColors.white,
     hintColor: CustomizedColors.alto,
@@ -88,7 +88,7 @@ class Themes {
     primaryColor: CustomizedColors.ebonyClay,
     backgroundColor: CustomizedColors.ebonyClay,
     colorScheme: ColorScheme.fromSwatch().copyWith(
-      primary: CustomizedColors.burntSienna,
+      secondary: CustomizedColors.burntSienna,
     ),
     scaffoldBackgroundColor: CustomizedColors.ebonyClay,
     hintColor: CustomizedColors.mirage,

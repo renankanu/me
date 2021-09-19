@@ -55,7 +55,7 @@ class _ItemSkillState extends State<ItemSkill>
       },
       child: InkWell(
         onTap: () {
-          Get.toNamed(Routes.DETAIL_SKILL, arguments: widget.skill);
+          Get.toNamed(Routes.detailSkill, arguments: widget.skill);
         },
         child: ScaleTransition(
           scale: Tween(begin: 0.96, end: 1.0).animate(_animation),
