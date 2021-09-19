@@ -38,7 +38,7 @@ class AvatarImage extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(
                 width: borderWidth ?? 4,
-                color: Get.theme.accentColor,
+                color: Get.theme.colorScheme.secondary,
               ),
               borderRadius: BorderRadius.all(
                 Radius.circular(getSize() / 2),

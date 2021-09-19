@@ -8,7 +8,9 @@ class Themes {
     visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.light,
     primaryColor: Colors.white,
-    accentColor: CustomizedColors.burntSienna,
+    colorScheme: ColorScheme.fromSwatch().copyWith(
+      primary: CustomizedColors.burntSienna,
+    ),
     scaffoldBackgroundColor: CustomizedColors.white,
     hintColor: CustomizedColors.alto,
     shadowColor: CustomizedColors.black.withOpacity(0.5),
@@ -85,7 +87,9 @@ class Themes {
     brightness: Brightness.dark,
     primaryColor: CustomizedColors.ebonyClay,
     backgroundColor: CustomizedColors.ebonyClay,
-    accentColor: CustomizedColors.burntSienna,
+    colorScheme: ColorScheme.fromSwatch().copyWith(
+      primary: CustomizedColors.burntSienna,
+    ),
     scaffoldBackgroundColor: CustomizedColors.ebonyClay,
     hintColor: CustomizedColors.mirage,
     shadowColor: CustomizedColors.black.withOpacity(0.5),

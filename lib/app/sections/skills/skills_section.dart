@@ -89,7 +89,7 @@ class SkillsSection extends StatelessWidget {
               Text(LocaleKeys.skillsSection_thingsIDo.tr),
               Container(
                 height: 2,
-                color: Get.theme.accentColor,
+                color: Get.theme.colorScheme.secondary,
                 width: 120,
               ),
               SizedBox(height: 16),

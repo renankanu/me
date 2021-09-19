@@ -62,7 +62,7 @@ class RepoSection extends StatelessWidget {
                         Text(LocaleKeys.repoSection_favoriteRepo.tr),
                         Container(
                           height: 2,
-                          color: Get.theme.accentColor,
+                          color: Get.theme.colorScheme.secondary,
                           width: 120,
                         ),
                         const SizedBox(height: 16),

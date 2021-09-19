@@ -56,7 +56,9 @@ class _FooterState extends State<Footer> with SingleTickerProviderStateMixin {
                 padding: const EdgeInsets.only(left: 8),
                 child: Text(
                   '© ${DateTime.now().year} RenanKanu',
-                  style: TextStyle(color: Get.theme.accentColor),
+                  style: TextStyle(
+                    color: Get.theme.colorScheme.secondary,
+                  ),
                 ),
               ),
             ),

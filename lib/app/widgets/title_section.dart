@@ -19,7 +19,7 @@ class TitleSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              color: Get.theme.accentColor,
+              color: Get.theme.colorScheme.secondary,
               child: Padding(
                 padding: const EdgeInsets.only(
                   left: 20,

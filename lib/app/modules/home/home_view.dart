@@ -26,7 +26,7 @@ class HomeView extends GetView<HomeController> {
         visible: !controller.isInitialLoading.value,
         child: Banner(
           message: 'Flutter',
-          color: Get.theme.accentColor,
+          color: Get.theme.colorScheme.secondary,
           location: BannerLocation.topEnd,
           child: Scaffold(
             appBar: !CustomizedResponsive.isSmallScreen() ? null : AppBar(),

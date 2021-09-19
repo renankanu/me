@@ -84,7 +84,7 @@ class Description extends StatelessWidget {
               borderRadius: BorderRadius.all(
                 Radius.circular(12),
               ),
-              color: Get.theme.accentColor,
+              color: Get.theme.colorScheme.secondary,
             ),
             child: Padding(
               padding: const EdgeInsets.symmetric(

@@ -22,9 +22,9 @@ class _MenuItemState extends State<MenuItem> {
 
   Color _borderColor() {
     if (widget.isActive) {
-      return Get.theme.accentColor;
+      return Get.theme.colorScheme.secondary;
     } else if (!widget.isActive & _isHover) {
-      return Get.theme.accentColor.withOpacity(0.5);
+      return Get.theme.colorScheme.secondary.withOpacity(0.5);
     }
     return Colors.transparent;
   }
@@ -56,7 +56,7 @@ class _MenuItemState extends State<MenuItem> {
           widget.text,
           style: Get.textTheme.bodyText1?.copyWith(
             color: widget.isActive
-                ? Get.theme.accentColor
+                ? Get.theme.colorScheme.secondary
                 : Get.theme.disabledColor,
             fontWeight: widget.isActive ? FontWeight.bold : FontWeight.normal,
           ),

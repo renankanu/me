@@ -100,17 +100,19 @@ class _SocialMediaButtonState extends State<SocialMediaButton> {
           height: 42,
           width: 42,
           decoration: BoxDecoration(
-            color: _isHover ? Get.theme.accentColor.withOpacity(0.2) : null,
+            color: _isHover
+                ? Get.theme.colorScheme.secondary.withOpacity(0.2)
+                : null,
             borderRadius: BorderRadius.circular(60),
             border: Border.all(
               width: 2,
-              color: Get.theme.accentColor,
+              color: Get.theme.colorScheme.secondary,
             ),
           ),
           child: Center(
             child: FaIcon(
               widget.icon,
-              color: Get.theme.accentColor,
+              color: Get.theme.colorScheme.secondary,
               semanticLabel: 'Icon social media',
             ),
           ),

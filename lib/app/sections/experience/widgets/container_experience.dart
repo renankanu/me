@@ -29,7 +29,7 @@ class ContainerExperience extends StatelessWidget {
                   height: 14,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(14 / 2),
-                    color: Get.theme.accentColor,
+                    color: Get.theme.colorScheme.secondary,
                   ),
                 ),
               ),
@@ -37,7 +37,7 @@ class ContainerExperience extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 7),
                 child: Container(
                   width: 2,
-                  color: Get.theme.accentColor,
+                  color: Get.theme.colorScheme.secondary,
                 ),
               ),
             ],
@@ -47,7 +47,7 @@ class ContainerExperience extends StatelessWidget {
               Container(
                 width: 10,
                 height: 2,
-                color: Get.theme.accentColor,
+                color: Get.theme.colorScheme.secondary,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
@@ -57,7 +57,7 @@ class ContainerExperience extends StatelessWidget {
                     borderRadius: BorderRadius.circular(4),
                     border: Border.all(
                       width: 2,
-                      color: Get.theme.accentColor,
+                      color: Get.theme.colorScheme.secondary,
                     ),
                   ),
                   child: Padding(
