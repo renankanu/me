@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:me/app/core/colors.dart';
-import 'package:me/app/utils/date_formater.dart';
+import 'package:me/app/utils/date_formatter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CardPinned extends StatelessWidget {
