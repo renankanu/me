@@ -11,6 +11,12 @@ class Themes {
     colorScheme: ColorScheme.fromSwatch().copyWith(
       secondary: CustomizedColors.burntSienna,
     ),
+    appBarTheme: AppBarTheme(
+      color: CustomizedColors.white,
+      iconTheme: IconThemeData(
+        color: CustomizedColors.ebonyClay,
+      ),
+    ),
     scaffoldBackgroundColor: CustomizedColors.white,
     hintColor: CustomizedColors.alto,
     shadowColor: CustomizedColors.black.withOpacity(0.5),
@@ -88,6 +94,12 @@ class Themes {
     primaryColor: CustomizedColors.ebonyClay,
     colorScheme: ColorScheme.fromSwatch().copyWith(
       secondary: CustomizedColors.burntSienna,
+    ),
+    appBarTheme: AppBarTheme(
+      color: CustomizedColors.ebonyClay,
+      iconTheme: IconThemeData(
+        color: CustomizedColors.white,
+      ),
     ),
     scaffoldBackgroundColor: CustomizedColors.ebonyClay,
     hintColor: CustomizedColors.mirage,
