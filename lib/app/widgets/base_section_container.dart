@@ -31,7 +31,6 @@ class BaseSectionContainer extends StatelessWidget {
                 opacity: 0.1,
                 child: Image.asset(
                   CustomizedImages.bg,
-                  height: constraint.maxWidth * .432,
                   semanticLabel: 'background image',
                 ),
               ),
