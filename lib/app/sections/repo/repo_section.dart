@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:loading_animations/loading_animations.dart';
 import 'package:me/app/core/core.dart';
-import 'package:me/app/core/graphql_query.dart';
 import 'package:me/app/modules/home/home_controller.dart';
 import 'package:me/app/widgets/base_section_container.dart';
 import 'package:me/app/widgets/title_section.dart';

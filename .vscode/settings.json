@@ -1,7 +1,5 @@
 {
-    "conventionalCommits.scopes": [
-        "feature",
-        "refactor"
-    ],
-    "dart.flutterSdkPath": "/Users/renankanu/fvm/versions/stable"
+  "conventionalCommits.scopes": ["feature", "refactor"],
+  "dart.flutterSdkPath": "/Users/renankanu/fvm/versions/stable",
+  "cSpell.words": ["scrollicon"]
 }

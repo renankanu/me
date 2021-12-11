@@ -15,4 +15,5 @@ abstract class CustomizedImages {
   static const String xpBg = 'assets/images/xp_bg.png';
   static const String icBr = 'assets/images/ic_br.png';
   static const String icEn = 'assets/images/ic_en.png';
+  static const String icScroll = 'assets/rive/scrollicon.riv';
 }
