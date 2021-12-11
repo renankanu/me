@@ -41,6 +41,7 @@ class IntroSection extends StatelessWidget {
               child: RowSocialMedia(),
               millisecondsDuration: 1000,
             ),
+            SizedBox(height: 60),
             SizedBox(
               height: 100,
               child: RiveAnimation.asset(CustomizedImages.icScroll),
