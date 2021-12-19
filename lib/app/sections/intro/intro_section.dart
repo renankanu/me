@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:me/app/animations/animations.dart';
 import 'package:me/app/core/colors.dart';
-import 'package:me/app/core/image.dart';
 import 'package:me/app/modules/home/home_controller.dart';
 import 'package:me/app/sections/intro/widgets/row_social_media.dart';
 import 'package:me/app/sections/intro/widgets/terminal.dart';
 import 'package:me/app/widgets/base_section_container.dart';
-import 'package:rive/rive.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class IntroSection extends StatelessWidget {
@@ -40,11 +38,6 @@ class IntroSection extends StatelessWidget {
             SlideAnimation(
               child: RowSocialMedia(),
               millisecondsDuration: 1000,
-            ),
-            SizedBox(height: 60),
-            SizedBox(
-              height: 100,
-              child: RiveAnimation.asset(CustomizedImages.icScroll),
             ),
           ],
         ),
