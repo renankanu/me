@@ -69,12 +69,29 @@ class _ItemSkillState extends State<ItemSkill>
                 width: 1,
               ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            child: Stack(
               children: [
-                Text(widget.skill.name!),
-                SizedBox(height: 24),
-                LogoSkill(icon: widget.skill.icon!)
+                Container(
+                  width: 200,
+                  height: 6,
+                  decoration: BoxDecoration(
+                    color: Get.theme.dividerColor,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(5),
+                      topRight: Radius.circular(5),
+                    ),
+                  ),
+                ),
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(widget.skill.name!),
+                      SizedBox(height: 24),
+                      LogoSkill(icon: widget.skill.icon!)
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
