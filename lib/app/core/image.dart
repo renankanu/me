@@ -16,5 +16,4 @@ abstract class CustomizedImages {
   static const String icBr = 'assets/images/ic_br.png';
   static const String icEn = 'assets/images/ic_en.png';
   static const String icScroll = 'assets/rive/scroll.riv';
-  static const String hat = 'assets/images/hat.png';
 }
